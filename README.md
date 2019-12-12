@@ -1,2 +1,0 @@
-# leemugeun.github.io
-Blog
