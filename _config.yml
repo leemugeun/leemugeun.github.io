@@ -35,6 +35,7 @@ plugins:
   - jekyll-feed
 
 asset_url : /assets
+files : /files
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -1,2 +1,48 @@
-.wrap { border:1px solid black; }
-.top{back}
+html{
+    font-family: sans-serif, Arial, Helvetica, ;
+}
+.wrap { 
+    border:1px solid black; 
+}
+
+.banner{
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.banner img{
+    max-height: initial;
+}
+
+.footer {
+    width:100%;
+    height:100px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer .menu{
+    border: 1px solid black;
+    border-width: medium;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 400px;
+    height: 60px;
+    display: block;
+    padding-top: 10px;
+}
+
+.footer .menu a{
+    display:inline-block;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: xx-large;
+
+}
+
+.footer .menu img{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
