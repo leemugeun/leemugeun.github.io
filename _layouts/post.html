@@ -1,0 +1,40 @@
+<html>
+    {% include head.html %}
+
+    <body>
+        <div class="p_wrap">
+            <div class="p_menu">
+                <a onclick="openMenu();">
+                    <img id="btn_menu" class="menu_btn" src="{{ site.files}}/menu.png" height="50">
+                </a>
+            </div>
+
+            <div class="p_header" onclick="goMenu('/main');">
+                Code Reference
+            </div>
+
+            
+            <div id="menu_box" class="panel panel-default p_menu_box" style="display:none;">
+                <div class="panel-body panel_b" onclick="goMenu('/main')">Main</div>
+                {% for item in site.data.menu.list %}
+                <div class="panel-body panel_b" onclick="goMenu('{{ item.link }}')">
+                    {{ item.title }}
+                </div>
+                {% endfor %}
+            </div>
+
+            <hr/>
+
+            <div class="label label-primary p_sub">
+                {% if page.title == "page_jekyll" %}
+                <div>Jekyll</div>
+                {% endif %}
+            </div>
+
+            
+            <div class="panel panel-default p_container">
+                {{ content }}
+            </div>
+        </div>
+    </body>
+</html>
