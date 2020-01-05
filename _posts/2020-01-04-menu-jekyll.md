@@ -3,4 +3,5 @@ layout: post
 title : page_jekyll
 permalink: /jekyll
 ---
-jekyll guide
+ 
+###시작하기

@@ -8,7 +8,15 @@
         {
             "id":"jekyll",
             "title":"Jekyll",
-            "link":"/jekyll"
+            "link":"/jekyll",
+            "category":[
+                {
+                    "title":"Jekyll 환경구성"
+                },
+                {
+                    "title":"Jekyll 가이드"
+                }
+            ]
         },
         {
             "id":"about",

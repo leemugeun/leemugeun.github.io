@@ -9,10 +9,9 @@
                 </a>
             </div>
 
-            <div class="p_header" onclick="goMenu('/main');">
-                Code Reference
+            <div class="p_header">
+                Guide
             </div>
-
             
             <div id="menu_box" class="panel panel-default p_menu_box" style="display:none;">
                 <div class="panel-body panel_b" onclick="goMenu('/main')">Main</div>
@@ -25,15 +24,18 @@
 
             <hr/>
 
-            <div class="label label-primary p_sub">
+            <div class="p_sub">
+                <div class="sub_img">
+                    <img src="{{ site.files }}/banner.jpg">
+                </div>
                 {% if page.title == "page_jekyll" %}
-                <div>Jekyll</div>
+                <div class="sub_txt">Jekyll</div>
                 {% endif %}
             </div>
 
             
             <div class="panel panel-default p_container">
-                {{ content }}
+                {% for item in site.data.menu.list.jekyll %}
             </div>
         </div>
     </body>

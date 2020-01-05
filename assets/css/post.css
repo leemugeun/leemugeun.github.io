@@ -1,3 +1,7 @@
+div{
+    display: block;
+}
+
 .p_wrap{
     width:100%;
     height: 100%;
@@ -18,11 +22,10 @@ hr{
 
 .p_header{
     top:30px;
-    left:57%;
+    right:20%;
     position: absolute;
     font-size: 50px;
     font-weight: bold;
-    cursor: pointer;
 }
 
 .p_menu{
@@ -42,7 +45,7 @@ hr{
     left:23%;
     width: 100px;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     font-size: 20px;
 }
 
@@ -54,23 +57,66 @@ hr{
 
 .p_sub{
     top: 200px;
-    width: 800px;
-    height:120px;
+    width: 100%;
+    height: 350px;
     position: absolute;
-    left: 50%;
-    margin-left: -400px;
+    overflow: hidden;
 }
 
-.p_sub div{
+.p_sub .sub_img{
+    max-height: inherit;
+    z-index: 0;
+    position: absolute;
+}
+
+.p_sub .sub_txt{
     margin:20px auto;
-    font-size: 70px;
+    font-size: 200px;
+    color: white;
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .p_container{
-    top : 400px;
-    width: 1200px;
+    top : 600px;
     height:100%;
-    position: absolute;
-    left: 50%;
-    margin-left: -600px;
+    max-width: 1200;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+@media (max-width:700px){
+    .p_menu{
+        left:7%;
+    }
+    
+    .p_menu_box{
+        top: 90px;
+        left: 7%;
+    }
+
+    .p_header{
+        font-size: 40px;
+        right:7%;
+    }
+
+    .p_sub{
+        top:150px;
+        height:200px;
+    }
+
+    .p_sub .sub_txt{
+        margin:60px auto;
+        font-size: 50px;
+    }
+
+    .p_container{
+        top:370px;
+    }
 }

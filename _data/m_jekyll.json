@@ -1,0 +1,12 @@
+{
+    "list":[
+        {
+            "title":"Jekyll 환경구성",
+            "link":"/git"
+        },
+        {
+            "title":"Jekyll 문법",
+            "link":"/jekyll"
+        }
+    ]
+}
