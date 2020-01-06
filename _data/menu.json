@@ -3,25 +3,29 @@
         {
             "id":"git",
             "title":"Git",
-            "link":"/git"
+            "link":"/git",
+            "page":"main_git"
         },
         {
             "id":"jekyll",
             "title":"Jekyll",
             "link":"/jekyll",
-            "category":[
+            "page":"main_jekyll",
+            "sub_menu":[
                 {
-                    "title":"Jekyll 환경구성"
+                    "sub_title":"Init Jekyll",
+                    "sub_link":"/jekyll/init"
                 },
                 {
-                    "title":"Jekyll 가이드"
+                    "sub_title":"Jekyll Guide"
                 }
             ]
         },
         {
             "id":"about",
             "title":"About",
-            "link":"/about"
+            "link":"/about",
+            "page":"main_about"
         }
     ]
 }

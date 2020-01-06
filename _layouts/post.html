@@ -28,14 +28,32 @@
                 <div class="sub_img">
                     <img src="{{ site.files }}/banner.jpg">
                 </div>
-                {% if page.title == "page_jekyll" %}
-                <div class="sub_txt">Jekyll</div>
+                {% for item in site.data.menu.list %}
+                {% if item.page == page.title %}
+                <div class="sub_txt">{{ item.title }}</div>
                 {% endif %}
+                {% endfor %}
             </div>
-
             
-            <div class="panel panel-default p_container">
-                {% for item in site.data.menu.list.jekyll %}
+            <div class="p_container_wrap">
+                <div class="p_container_title">
+                    {{ page.postname }} Posting
+                </div>
+                <div class="panel panel-default p_container">
+                    {% if page.title contains "main" %}
+                    <ul id="innr_box">
+                        {% for item in site.data.menu.list %}
+                        {% if item.page == page.title %}
+                            {% for item2 in item.sub_menu %}
+                            <li data-innr-box="Y" onclick="goMenu('{{ item2.sub_link }}')" class="p_container_lst">{{ item2.sub_title }}</li>
+                            {% endfor %}
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    {% elsif page.title contains "innr" %}
+                        {{ content }}
+                    {% endif %}
+                </div>
             </div>
         </div>
     </body>

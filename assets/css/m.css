@@ -48,6 +48,10 @@ li{
 }
 
 @media (max-width:700px){
+    body{
+        overflow: hidden;
+    }
+    
     .menu{
         left: 50px;
     }

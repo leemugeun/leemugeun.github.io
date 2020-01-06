@@ -2,22 +2,27 @@ div{
     display: block;
 }
 
+ul{
+    margin: 0px;
+    padding: 0px;    
+}
+
 .p_wrap{
     width:100%;
     height: 100%;
-    background-color: white;
     position: relative;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-hr{
+.p_wrap hr{
     top: 100px;
     width: 1200px;
     position: absolute;
-    border: 1px solid black;
     left: 50%;
     margin-left: -600px;
     text-align: center;
+    height:2px;
+    background-color: black;
 }
 
 .p_header{
@@ -80,15 +85,50 @@ hr{
     transform: translateX(-50%);
 }
 
+.p_container_wrap{
+    top : 550px;
+    min-height: 500px;
+    background-color: #ddd;
+    position: relative;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.p_container_title{
+    max-width: 1200px;
+    height: 50px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
+
 .p_container{
-    top : 600px;
-    height:100%;
-    max-width: 1200;
+    max-width: 1200px;
+    min-height: 500px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     font-size: 20px;
     padding: 20px 20px 20px 20px;
+}
+
+.p_container_lst{
+    border: 2px solid #ddd;
+    width: 550px;
+    height: 150px;
+    display: inline-block;
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+    padding-top: 30px;
+    cursor: pointer;
+    margin: 0 12px;
+}
+
+.p_container_lst:hover{
+    border: 2px solid black;
 }
 
 @media (max-width:700px){
@@ -116,7 +156,32 @@ hr{
         font-size: 50px;
     }
 
+    .p_container_wrap{
+        top: 350px;
+    }
+
+    .p_container_title{
+        left: 20px;
+    }
+
     .p_container{
-        top:370px;
+        max-width: 700px;
+        min-height: 500px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 20px;
+        padding: 20px 20px 20px 20px;
+    }
+
+    .p_container_lst{
+        max-width: 300px;
+        max-height: 80px;
+        font-size: 20px;
+        left: 50%;
+        margin-left: -150px;
+        margin-bottom: 20px;
+        display: list-item;
+        padding-top: 25px;
     }
 }
