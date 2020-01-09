@@ -1,8 +1,7 @@
 ---
 layout: post
-title : innr_jekyll1
+title : innr_jekyll
 postname: Jekyll
 permalink: /jekyll/init
 ---
-
-Init Jekyllfasdf
+TETSET

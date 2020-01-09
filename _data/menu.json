@@ -4,13 +4,15 @@
             "id":"git",
             "title":"Git",
             "link":"/git",
-            "page":"main_git"
+            "page":"main_git",
+            "innr":"innr_git"
         },
         {
             "id":"jekyll",
             "title":"Jekyll",
             "link":"/jekyll",
             "page":"main_jekyll",
+            "innr":"innr_jekyll",
             "sub_menu":[
                 {
                     "sub_title":"Init Jekyll",

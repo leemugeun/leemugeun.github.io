@@ -3,33 +3,35 @@
 
     <body>
         <div class="p_wrap">
-            <div class="p_menu">
-                <a onclick="openMenu();">
-                    <img id="btn_menu" class="menu_btn" src="{{ site.files}}/menu.png" height="50">
-                </a>
-            </div>
-
             <div class="p_header">
-                Guide
-            </div>
-            
-            <div id="menu_box" class="panel panel-default p_menu_box" style="display:none;">
-                <div class="panel-body panel_b" onclick="goMenu('/main')">Main</div>
-                {% for item in site.data.menu.list %}
-                <div class="panel-body panel_b" onclick="goMenu('{{ item.link }}')">
-                    {{ item.title }}
+                <div class="p_menu">
+                    <a onclick="openMenu();">
+                        <img id="btn_menu" class="menu_btn" src="{{ site.files}}/menu.png" height="50">
+                    </a>
                 </div>
-                {% endfor %}
-            </div>
 
-            <hr/>
+                <div class="p_header_txt">
+                    Guide
+                </div>
+                
+                <div id="menu_box" class="panel panel-default p_menu_box" style="display:none;">
+                    <div class="panel-body panel_b" onclick="goMenu('/main')">Main</div>
+                    {% for item in site.data.menu.list %}
+                    <div class="panel-body panel_b" onclick="goMenu('{{ item.link }}')">
+                        {{ item.title }}
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <hr/>
+            </div>
 
             <div class="p_sub">
                 <div class="sub_img">
                     <img src="{{ site.files }}/banner.jpg">
                 </div>
                 {% for item in site.data.menu.list %}
-                {% if item.page == page.title %}
+                {% if item.page == page.title or item.innr == page.title %}
                 <div class="sub_txt">{{ item.title }}</div>
                 {% endif %}
                 {% endfor %}
@@ -45,7 +47,7 @@
                         {% for item in site.data.menu.list %}
                         {% if item.page == page.title %}
                             {% for item2 in item.sub_menu %}
-                            <li data-innr-box="Y" onclick="goMenu('{{ item2.sub_link }}')" class="p_container_lst">{{ item2.sub_title }}</li>
+                            <li onclick="goMenu('{{ item2.sub_link }}')" class="p_container_lst">{{ item2.sub_title }}</li>
                             {% endfor %}
                         {% endif %}
                         {% endfor %}
