@@ -4,6 +4,8 @@ $(document).ready(function(){
             $("#menu_box").hide(50);
         }
     })
+
+    
 });
 
 function openMenu(){

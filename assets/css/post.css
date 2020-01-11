@@ -14,10 +14,14 @@ ul{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.md_img{
+    max-width: 100%;
+    height: auto;
+}
+
 /* Header */
 
 .p_header{
-    position: fixed;
     width: 100%;
     height: 130px;
     z-index: 1000;
@@ -125,7 +129,6 @@ ul{
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    font-size: 20px;
     padding: 20px 20px 20px 20px;
 }
 
