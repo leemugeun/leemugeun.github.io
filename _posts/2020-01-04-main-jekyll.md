@@ -18,7 +18,7 @@ Github의 기능으로 간단히 개인 블로그를 만들 수 있는데 `Jekyl
 **Public**으로 설정하시면 언제어디서나 접근이 가능하며, **README**는 누군가가 Github접근시 안내를 위한 안내장(?) 정도로 보면 됩니다.
 ![Git]({{ site.files}}/Jekyll/git_blog_create.png)
 
-**README.md의 용도**
+**`README.md의 용도`**
 ![Git]({{ site.files}}/Jekyll/git_blog_readme.png)  
 
 ## Ruby 환경구성

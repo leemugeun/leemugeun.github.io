@@ -24,13 +24,6 @@
                     "sub_title":"Jekyll Guide"
                 }
             ]
-        },
-        {
-            "id":"about",
-            "title":"About",
-            "link":"/about",
-            "page":"main_about",
-            "sub_yn" : "N"
         }
     ]
 }
