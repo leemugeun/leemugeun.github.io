@@ -5,7 +5,8 @@
             "title":"Git",
             "link":"/git",
             "page":"main_git",
-            "innr":"innr_git"
+            "innr":"innr_git",
+            "sub_yn" : "N"
         },
         {
             "id":"jekyll",
@@ -13,6 +14,7 @@
             "link":"/jekyll",
             "page":"main_jekyll",
             "innr":"innr_jekyll",
+            "sub_yn" : "N",
             "sub_menu":[
                 {
                     "sub_title":"Init Jekyll",
@@ -27,7 +29,8 @@
             "id":"about",
             "title":"About",
             "link":"/about",
-            "page":"main_about"
+            "page":"main_about",
+            "sub_yn" : "N"
         }
     ]
 }

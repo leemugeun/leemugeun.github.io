@@ -42,17 +42,15 @@
                     {{ page.postname }} Posting
                 </div>
                 <div id="p_container" class="panel panel-default p_container">
-                    {% if page.title contains "main" %}
+                    {% if item.sub_yn == "Y" %}
+                    {% for item in site.data.menu.list %}
                     <ul id="innr_box">
-                        {% for item in site.data.menu.list %}
-                        {% if item.page == page.title %}
-                            {% for item2 in item.sub_menu %}
-                            <li onclick="goMenu('{{ item2.sub_link }}')" class="p_container_lst">{{ item2.sub_title }}</li>
-                            {% endfor %}
-                        {% endif %}
+                        {% for item2 in item.sub_menu %}
+                        <li onclick="goMenu('{{ item2.sub_link }}')" class="p_container_lst">{{ item2.sub_title }}</li>
                         {% endfor %}
                     </ul>
-                    {% elsif page.title contains "innr" %}
+                    {% endfor %}
+                    {% else %}
                         {{ content }}
                     {% endif %}
                 </div>

@@ -14,6 +14,9 @@ ul{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.p_wrap .highlighter-rouge{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 #p_container .md_img{
     max-width: 100%;
@@ -106,7 +109,7 @@ ul{
 /* Inner */
 
 .p_container_wrap{
-    top : 480px;
+    top : 350px;
     min-height: 500px;
     background-color: #ddd;
     position: relative;
@@ -185,7 +188,7 @@ ul{
     }
 
     .p_container_wrap{
-        top: 350px;
+        top: 250px;
     }
 
     .p_container_title{
@@ -198,7 +201,6 @@ ul{
         position: relative;
         margin-left: auto;
         margin-right: auto;
-        font-size: 20px;
         padding: 20px 20px 20px 20px;
     }
 

@@ -31,7 +31,7 @@ Jekyll은 Ruby개발환경에서 작업할 수 있으므로 Ruby를 설치해 �
 
 설치가 완료되면 아래와 같은 Ruby Command 창이 나타나며 1, 2, 3 모두 실행합니다
 
-![Ruby]({{ site.files}}/Jekyll/ruby_install_cmd.png) 
+![Ruby]({{ site.files}}/Jekyll/ruby_install_cmd.png)
 
 정상적으로 Ruby가 설치가 되었는지 확인을 해 봅시다
 
@@ -102,7 +102,6 @@ http://localhost:4000/
 
 새로 생성된 `Jekyll`웹을 개발하기위한 초기세팅은 끝났으며, 환경구성을 위해서는 개발툴(IDE)을 설치를 해야하는데 **Visual Studio Code**로 개발이 가능합니다. Git을 설치한 후 **Visual Studio Code**에 연결하여 Pull Push를 이용해 Github에 저장된 Repository에 작업사항을 관리하며 자신만의 Github Blog를 꾸며나갈 수 있습니다.  
 [Download Visual Studio Code][link-VS-Code]
-
 
 [link-Markdown]: https://www.markdownguide.org/basic-syntax
 [link-Front]: https://poiemaweb.com/
