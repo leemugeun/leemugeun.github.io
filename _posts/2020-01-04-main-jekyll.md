@@ -1,8 +1,7 @@
 ---
 layout: post
-title : main_jekyll
-postname: Jekyll
-permalink: /jekyll
+title : main
+postname: main
 ---
 개인적으로 Blog를 갖고싶은 경우 Naver, Daum, Tistory 등을 이용하여 블로그를 꾸미거나 웹 호스팅을 하여 자신만의 블로그를 꾸며나갈 수 있습니다. 하지만 플랫폼 내에서 블로그를 만들경우 본인이 원하는대로 디자인을 꾸미기보다는 주어진 방식 내에서 해결해야 하며, 웹 호스팅을 할 경우에는 추가적인 비용이 듭니다. `Jekyll`을 이용하여 **Github 블로그**를 만들면 DB나 웹서버를 이용할 수는 없지만 정적인 자신만의 웹사이트를 만들 수 있으며 웹사이트를 마음대로 꾸며나갈 수 있습니다.
 
@@ -82,7 +81,8 @@ jekyll new leemugeun.github.io
 
 ## Jekyll 로컬환경 구동
 
-로컬환경에서 Jekyll을 이용한 웹사이트를 만들경우 미리보기 서버로 사이트를 빌드합니다
+`Jekyll new` Command를 이용하여 만든 폴더를 경로로 하고 Command창을 엽니다  
+그리고 로컬환경에서 Jekyll을 이용한 웹사이트를 만들경우 미리보기 서버로 사이트를 빌드합니다.
 Ctrl + C 로 구동된 미리보기 서버를 종료할 수 있습니다.
 
 ```console

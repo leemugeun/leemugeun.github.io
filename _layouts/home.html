@@ -2,22 +2,36 @@
     {% include head.html %}
 
     <body>
-        <div class="banner">
-            <a onclick="openMenu();">
-                <img id="btn_menu" class="menu_btn" src="{{ site.files}}/menu.png" height="50">
-            </a>
-            <img src="{{ site.files }}/banner.jpg">
-            <span>Guide Blog</span>
+        <div id="main_banner" class="main_banner">
+            <div class="btn_menu_box">
+                <a id="btn_menu" onclick="openMenuList();">
+                    <img id="btn_basic" class="btn_basic" src="{{ site.files}}/menu.png" height="50">
+                </a>    
+            </div>
 
-            <div id="menu_box" class="panel panel-default menu" style="display:none;">
+            <div id="banner_txt">
+                Guide Blog
+            </div>
+
+            <img src="{{ site.files }}/banner.jpg" >
+            
+            <!-- <div id="menu_box" class="panel panel-default menu" style="display:none;">
                 {% for item in site.data.menu.list %}
                 <div class="panel-body panel_b" onclick="goMenu('{{ item.link }}')">
                     {{ item.title }}
                 </div>
                 {% endfor %}
+            </div> -->
+        </div>
+        <div id="sub_banner" class="sub_banner">
+            <div class="menu_title">
+                <h3>Notice</h3>
+                <h3>Source Code 참고용 Blog 입니다</h3>
             </div>
         </div>
-
+        
         {{ content }}
+
+        <input type="hidden" id="open_meu" value="N">
     </body>
-</html
+</html>

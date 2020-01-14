@@ -1,15 +1,27 @@
 {
     "list":[
         {
-            "id":"git",
+            "title":"Main",
+            "link":"/",
+            "sub_yn" : "N"
+        },
+        {
             "title":"Git",
             "link":"/git",
             "page":"main_git",
             "innr":"innr_git",
-            "sub_yn" : "N"
+            "sub_yn" : "N",
+            "sub_menu":[
+                {
+                    "sub_title":"Init Git",
+                    "sub_link":"/jekyll/init"
+                },
+                {
+                    "sub_title":"Git Guide"
+                }
+            ]
         },
         {
-            "id":"jekyll",
             "title":"Jekyll",
             "link":"/jekyll",
             "page":"main_jekyll",

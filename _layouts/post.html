@@ -2,25 +2,38 @@
     {% include head.html %}
 
     <body>
-        <div class="p_wrap">
+        <div id="p_nav" class="p_nav">
+            <div class="p_nav_btn">
+                <a onclick="closeNav();">
+                    <img src="{{ site.files }}/nav/right.png" height="60">
+                </a>
+            </div>
+            <div class="p_nav_title">
+                <img src="{{ site.files }}/nav/navigation.png" height="40">
+                Navigation
+            </div>
+            <div id="p_nav_menu" class="p_nav_menu">
+                <dl>
+                   <dt>Git</dt>
+                   <dd>- Git Init</dd>
+                </dl>
+                <dl>
+                    <dt>Jekyll</dt>
+                    <dd>- Jekyll Init</dd>
+                 </dl>
+            </div>
+        </div>
+    </div>
+        <div id="p_bg_black" class="p_bg_black"></div>
+        <div id="p_wrap" class="p_wrap">
             <div class="p_header">
-                <div class="p_menu">
-                    <a onclick="openMenu();">
-                        <img id="btn_menu" class="menu_btn" src="{{ site.files}}/menu.png" height="50">
+                <div class="p_header_title">
+                    <span><strong>MZ</strong> Tech</span>
+                </div>
+                <div class="p_header_btn">
+                    <a onclick="openNav();">
+                        <img src="{{ site.files }}/menu.png" height="60">
                     </a>
-                </div>
-
-                <div class="p_header_txt">
-                    Guide
-                </div>
-                
-                <div id="menu_box" class="panel panel-default p_menu_box" style="display:none;">
-                    <div class="panel-body panel_b" onclick="goMenu('/main')">Main</div>
-                    {% for item in site.data.menu.list %}
-                    <div class="panel-body panel_b" onclick="goMenu('{{ item.link }}')">
-                        {{ item.title }}
-                    </div>
-                    {% endfor %}
                 </div>
             </div>
 
