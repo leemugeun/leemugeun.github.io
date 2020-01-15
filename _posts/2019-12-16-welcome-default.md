@@ -1,7 +1,8 @@
 ---
-layout: page
-title:  "Welcome to Jekyll MG!"
-
+layout: post
+title : Main
+postname: Main
+permalink: /main
 ---
 
-This is Default MarkDown
+Main Page

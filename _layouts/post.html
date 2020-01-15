@@ -9,18 +9,30 @@
                 </a>
             </div>
             <div class="p_nav_title">
-                <img src="{{ site.files }}/nav/navigation.png" height="40">
+                <img class="nav_icon" src="{{ site.files }}/nav/navigation.png" height="40">
                 Navigation
             </div>
             <div id="p_nav_menu" class="p_nav_menu">
-                <dl>
-                   <dt>Git</dt>
-                   <dd>- Git Init</dd>
-                </dl>
-                <dl>
-                    <dt>Jekyll</dt>
-                    <dd>- Jekyll Init</dd>
-                 </dl>
+                {% for item in site.data.menu.list %}
+                <ul>
+                    <li data-navdep="1" class="nav_onedep">
+                        <img class="nav_icon" src={{item.icon}} height="35">
+                        {% if item.title == "Main" %}
+                        <a href={{item.link}} style="color: black;">{{ item.title }}</a>
+                        {% else %}
+                        {{ item.title }}
+                        {% endif %}
+                    </li>
+
+                    {% if item.sub_yn == "Y" %}
+                    <ul data-navdep="2" class="nav_twodep">
+                        {% for sub in item.sub %}
+                        <li><a href={{sub.s_link}}>- {{ sub.s_title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </ul>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -32,7 +44,7 @@
                 </div>
                 <div class="p_header_btn">
                     <a onclick="openNav();">
-                        <img src="{{ site.files }}/menu.png" height="60">
+                        <img src="{{ site.files }}/menu.png" height="40">
                     </a>
                 </div>
             </div>
@@ -42,7 +54,7 @@
                     <img src="{{ site.files }}/banner.jpg">
                 </div>
                 {% for item in site.data.menu.list %}
-                {% if item.page == page.title or item.innr == page.title %}
+                {% if item.title == page.title %}
                 <div class="sub_txt">{{ item.title }}</div>
                 {% endif %}
                 {% endfor %}
@@ -53,14 +65,16 @@
                     {{ page.postname }} Posting
                 </div>
                 <div id="p_container" class="panel panel-default p_container">
-                    {% if item.sub_yn == "Y" %}
-                    {% for item in site.data.menu.list %}
-                    <ul id="innr_box">
-                        {% for item2 in item.sub_menu %}
-                        <li onclick="goMenu('{{ item2.sub_link }}')" class="p_container_lst">{{ item2.sub_title }}</li>
+                    {% if page.title == "Main" %}
+                    <ul>
+                        {% for post in site.posts %}
+                        {% if post.title != "Main" %}
+                          <li>
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                          </li>
+                          {% endif %}  
                         {% endfor %}
-                    </ul>
-                    {% endfor %}
+                      </ul>
                     {% else %}
                         {{ content }}
                     {% endif %}

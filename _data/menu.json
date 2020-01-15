@@ -2,38 +2,33 @@
     "list":[
         {
             "title":"Main",
-            "link":"/",
+            "link":"/main",
+            "icon": "/files/nav/main.png",
             "sub_yn" : "N"
         },
         {
             "title":"Git",
             "link":"/git",
-            "page":"main_git",
-            "innr":"innr_git",
-            "sub_yn" : "N",
-            "sub_menu":[
+            "icon": "/files/nav/git.png",
+            "sub_yn" : "Y",
+            "sub":[
                 {
-                    "sub_title":"Init Git",
-                    "sub_link":"/jekyll/init"
-                },
-                {
-                    "sub_title":"Git Guide"
+                    "s_title":"Git CMD",
+                    "s_link":"/git",
+                    "s_info":"Git 기초 CMD"
                 }
             ]
         },
         {
             "title":"Jekyll",
             "link":"/jekyll",
-            "page":"main_jekyll",
-            "innr":"innr_jekyll",
-            "sub_yn" : "N",
-            "sub_menu":[
+            "icon": "/files/nav/jekyll.png",
+            "sub_yn" : "Y",
+            "sub":[
                 {
-                    "sub_title":"Init Jekyll",
-                    "sub_link":"/jekyll/init"
-                },
-                {
-                    "sub_title":"Jekyll Guide"
+                    "s_title":"Jekyll Init",
+                    "s_link":"/jekyll",
+                    "s_info":"Gitblog를 위한 Jekyll 설치"
                 }
             ]
         }

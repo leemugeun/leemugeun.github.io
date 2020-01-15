@@ -1,6 +1,6 @@
 ul{
     margin: 0px;
-    padding: 0px;    
+    padding: 0px;   
 }
 
 .p_wrap{
@@ -47,6 +47,7 @@ ul{
     height: 60px;
     right: 7%;
     position: absolute;
+    cursor: pointer;
 }
 
 .p_nav_title{
@@ -56,13 +57,44 @@ ul{
     font-weight: bold;
 }
 
-.p_nav_title img{
+.nav_icon{
     display: inline-block;
     vertical-align: top;
     margin-right: 20px;
 }
 
+
 .p_nav_menu{
+    position: absolute;
+    margin-top: 130px;
+    height: 100%;
+
+}
+
+.p_nav_menu a{
+    text-decoration: none;
+    color: gray;
+    cursor: pointer;
+}
+
+.p_nav_menu a:hover{
+    text-decoration: none;
+    color: gray;
+}
+
+.nav_onedep{
+    font-size: 30px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.nav_twodep{
+    font-size: 22px;
+    display: none;
+    margin-left: 60px;
+}
+
+/* .p_nav_menu{
     position: absolute;
     margin-top: 130px;
     height: 100%;
@@ -84,29 +116,30 @@ ul{
     color: gray;
     display: none;
     margin-left: 10px;
-}
+} */
 
 /* Header */
 
 .p_header{
     width: 100%;
-    height: 130px;
+    height: 60px;
     background-color: white;    
 }
 
 .p_header_btn{
     width: 60px;
     height: 60px;
-    top:20px;
+    top: 13px;
     position: fixed;
     right:2%;
     cursor: pointer;
+    z-index: 10;
 }
 
 .p_header_title {
     width:200px;
-    height: 70px;
-    margin: 20px auto;
+    height: 60px;
+    margin: 0 auto;
     position: absolute;
     font-size: 40px;
     left: 50%;
@@ -136,7 +169,7 @@ ul{
 /* Banner */
 
 .p_sub{
-    top: 100px;
+    top: 60px;
     width: 100%;
     height: 350px;
     position: absolute;
@@ -163,7 +196,7 @@ ul{
 /* Inner */
 
 .p_container_wrap{
-    top : 320px;
+    top : 350px;
     min-height: 500px;
     background-color: #ddd;
     position: relative;
@@ -220,8 +253,8 @@ ul{
 
 @media (max-width:700px){
     .p_sub{
-        top:100px;
-        height:200px;
+        top: 60px;
+        height: 200px;
     }
 
     .p_sub .sub_txt{
