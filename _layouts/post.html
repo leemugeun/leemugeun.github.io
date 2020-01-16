@@ -40,7 +40,7 @@
         <div id="p_wrap" class="p_wrap">
             <div class="p_header">
                 <div class="p_header_title">
-                    <span><strong>MZ</strong> Tech</span>
+                    <span><strong>M</strong> Tech</span>
                 </div>
                 <div class="p_header_btn">
                     <a onclick="openNav();">
@@ -62,19 +62,27 @@
             
             <div class="p_container_wrap">
                 <div class="p_container_title">
-                    {{ page.postname }} Posting
+                    {{ page.title }} Posting
                 </div>
-                <div id="p_container" class="panel panel-default p_container">
+                <div id="p_container" class="p_container">
                     {% if page.title == "Main" %}
-                    <ul>
+                    <div>
                         {% for post in site.posts %}
                         {% if post.title != "Main" %}
-                          <li>
-                            <a href="{{ post.url }}">{{ post.title }}</a>
-                          </li>
+                          <div class="p_lst">
+                            <a href="{{ post.url }}">
+                                <p class="p_lst_title">{{ post.title }}</p>
+                                <p class="p_lst_txt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+
+                                <div class="p_lst_side">
+                                    <img class="p_lst_icon" src="/files/nav/{{ post.icon }}.png" height="50" />
+                                    <p>{{ post.date |  date: '%Y-%m-%d' }}</p>
+                                </div>
+                            </a>
+                          </div>
                           {% endif %}  
                         {% endfor %}
-                      </ul>
+                    </div>
                     {% else %}
                         {{ content }}
                     {% endif %}

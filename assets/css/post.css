@@ -3,6 +3,11 @@ ul{
     padding: 0px;   
 }
 
+a, a:link, a:visited, a:active, a:hover {
+    color: #505050;
+    text-decoration: none !important;
+}
+
 .p_wrap{
     width:100%;
     height: 100%;
@@ -94,42 +99,21 @@ ul{
     margin-left: 60px;
 }
 
-/* .p_nav_menu{
-    position: absolute;
-    margin-top: 130px;
-    height: 100%;
-    width: 280px;
-}
-
-.p_nav_menu dl{
-    margin-bottom: 0px;
-    cursor: pointer;
-}
-
-.p_nav_menu dt{
-    font-size: 30px;
-    font-weight: normal;
-}
-
-.p_nav_menu dd{
-    font-size: 22px;
-    color: gray;
-    display: none;
-    margin-left: 10px;
-} */
-
 /* Header */
 
 .p_header{
     width: 100%;
     height: 60px;
-    background-color: white;    
+    background-color: white;  
+    position: fixed; 
+    z-index: 10;
+    box-shadow: 0px 0px 8px 1px black;
 }
 
 .p_header_btn{
     width: 60px;
     height: 60px;
-    top: 13px;
+    top: 11px;
     position: fixed;
     right:2%;
     cursor: pointer;
@@ -215,8 +199,11 @@ ul{
 }
 
 .p_container{
+    background-color: white;
+    border-radius: 10px;
     max-width: 1200px;
     min-height: 500px;
+    height: auto;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -225,35 +212,38 @@ ul{
     line-height: 30px;
 }
 
-.p_container h2{
-    margin: 60px 0 30px 0;
-    font-size: 28px;
-}
-
-.p_container .md_img{
-    margin-bottom: 30px;
-}
-
-.p_container_lst{
-    border: 2px solid #ddd;
-    width: 550px;
-    height: 150px;
-    display: inline-block;
-    text-align: center;
-    font-size: 50px;
+.p_lst{
+    border-bottom: 1px solid gray;
+    max-width: 1000px;
+    min-height: 130px;
+    margin: 0 auto 30px auto;
     position: relative;
-    padding-top: 30px;
-    cursor: pointer;
-    margin: 0 12px;
 }
 
-.p_container_lst:hover{
-    border: 2px solid black;
+.p_lst_title{
+    font-size: 30px;
+}
+
+.p_lst_txt{
+    max-width:800px;
+}
+
+.p_lst_side{
+    width: 150px;
+    height: 100px;
+    top: 20px;
+    right: 0;
+    position: absolute;
+    text-align: center;
+}
+
+.p_lst_icon{
+    margin-bottom: 10px;
 }
 
 @media (max-width:700px){
     .p_sub{
-        top: 60px;
+        top: 30px;
         height: 200px;
     }
 
@@ -278,15 +268,22 @@ ul{
         margin-right: auto;
         padding: 20px 20px 20px 20px;
     }
+/* 
+    .p_lst{
+        min-height: 50px;
+    } */
 
-    .p_container_lst{
-        max-width: 300px;
-        max-height: 80px;
-        font-size: 20px;
-        left: 50%;
-        margin-left: -150px;
-        margin-bottom: 20px;
-        display: list-item;
-        padding-top: 25px;
+    .p_lst_side{
+        margin-left: 60%;
+        height: 40px;
+        position: static;
+    }
+
+    .p_lst_side img{
+        height: 25px;
+    }
+
+    .p_lst_side p{
+        display: inline-block;
     }
 }
