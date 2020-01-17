@@ -40,7 +40,9 @@
         <div id="p_wrap" class="p_wrap">
             <div class="p_header">
                 <div class="p_header_title">
-                    <span><strong>M</strong> Tech</span>
+                    <a href="/">
+                        <span><strong>M</strong> Tech</span>
+                    </a>
                 </div>
                 <div class="p_header_btn">
                     <a onclick="openNav();">
@@ -49,16 +51,13 @@
                 </div>
             </div>
 
-            <div class="p_sub">
-                <div class="sub_img">
-                    <img src="{{ site.files }}/banner.jpg">
-                </div>
-                {% for item in site.data.menu.list %}
-                {% if item.title == page.title %}
-                <div class="sub_txt">{{ item.title }}</div>
-                {% endif %}
-                {% endfor %}
+            {% for item in site.data.menu.list %}
+            {% if item.title == page.title %}
+            <div class="p_sub" style="background-image: url('/files/ban/{{ page.icon }}.jpg')">
+                <div class="sub_txt">{{ page.postname }}</div>
             </div>
+            {% endif %}
+            {% endfor %}
             
             <div class="p_container_wrap">
                 <div class="p_container_title">

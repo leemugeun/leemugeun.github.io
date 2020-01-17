@@ -2,7 +2,7 @@
     "list":[
         {
             "title":"Main",
-            "link":"/main",
+            "link":"/",
             "icon": "/files/nav/main.png",
             "sub_yn" : "N"
         },
@@ -14,8 +14,7 @@
             "sub":[
                 {
                     "s_title":"Git CMD",
-                    "s_link":"/git",
-                    "s_info":"Git 기초 CMD"
+                    "s_link":"/git"
                 }
             ]
         },
@@ -27,8 +26,19 @@
             "sub":[
                 {
                     "s_title":"Jekyll Init",
-                    "s_link":"/jekyll",
-                    "s_info":"Gitblog를 위한 Jekyll 설치"
+                    "s_link":"/jekyll"
+                }
+            ]
+        },
+        {
+            "title":"DB",
+            "link":"/db",
+            "icon": "/files/nav/db.png",
+            "sub_yn" : "Y",
+            "sub":[
+                {
+                    "s_title":"Transaction",
+                    "s_link":"/db/tran"
                 }
             ]
         }
