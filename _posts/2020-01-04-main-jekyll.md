@@ -3,7 +3,7 @@ layout: post
 title : Jekyll
 icon: jekyll
 postname : Jekyll
-permalink: /Jekyll
+permalink: /jekyll
 ---
 개인적으로 Blog를 갖고싶은 경우 Naver, Daum, Tistory 등을 이용하여 블로그를 꾸미거나 웹 호스팅을 하여 자신만의 블로그를 꾸며나갈 수 있습니다. 하지만 플랫폼 내에서 블로그를 만들경우 본인이 원하는대로 디자인을 꾸미기보다는 주어진 방식 내에서 해결해야 하며, 웹 호스팅을 할 경우에는 추가적인 비용이 듭니다. `Jekyll`을 이용하여 **Github 블로그**를 만들면 DB나 웹서버를 이용할 수는 없지만 정적인 자신만의 웹사이트를 만들 수 있으며 웹사이트를 마음대로 꾸며나갈 수 있습니다.
 
