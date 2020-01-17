@@ -254,6 +254,24 @@ a, a:link, a:visited, a:active, a:hover {
 }
 
 @media (max-width:700px){
+
+    .p_nav_menu .nav_icon{
+        height: 30px;
+    }
+
+    .nav_onedep{
+        font-size: 23px;
+    }
+
+    .nav_twodep{
+        font-size: 18px;
+    }
+
+    .p_header_title{
+        font-size: 25px;
+        padding-top: 13px;
+    }
+
     .p_sub{
         top: 30px;
         height: 200px;

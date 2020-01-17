@@ -12,6 +12,7 @@ function pageOnload(){
 
     $("#p_nav_menu [data-navdep='1']").click(function(){
         if ($(this).siblings("ul").is(":visible")){
+            $(this).siblings("ul").hide(300)
             return;
         }
 
