@@ -36,14 +36,14 @@ function openNav() {
     else{
         $("#p_nav").animate({ 
             width : "100%",
-            right : "0px"
+            right : "0"
         });
     }
 }
 
 function closeNav(){
     $("#p_bg_black").hide();
-    $("#p_nav_menu dd").hide();
+    $("#p_nav_menu [data-navdep='2']").hide(300);
 
     if ($("body").width() > 700 ){
         $("#p_wrap").animate({

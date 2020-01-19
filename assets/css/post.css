@@ -1,21 +1,59 @@
-ul{
+html{
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body{
     margin: 0px;
-    padding: 0px;   
+}
+
+ul, li{
+    margin: 0px;
+    padding: 0px; 
+    list-style-type: none;
+}
+
+h2{
+    font-weight: 500;
+}
+
+table{
+    font-size: 14px;
+}
+
+pre{
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 a, a:link, a:visited, a:active, a:hover {
     color: black;
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 .p_wrap{
     width:100%;
     height: 100%;
     position: relative;
-    font-family: sans-serif, Verdana, Geneva, Tahoma;
 }
 
-.p_wrap .highlighter-rouge{
+p .highlighter-rouge{
+    font-family: sans-serif, Verdana, Geneva, Tahoma;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    padding: 2px 4px;
+}
+
+.highlight span{
     font-family: sans-serif, Verdana, Geneva, Tahoma;
 }
 
@@ -42,12 +80,12 @@ a, a:link, a:visited, a:active, a:hover {
     height: 100%;
     position: fixed;
     background-color: white;
-    right: -350px;
+    right: -380px;
     z-index: 100;
-    padding: 30px 30px 30px 30px;
 }
 
 .p_nav_btn{
+    margin-top: 30px;
     width: 60px;
     height: 60px;
     right: 7%;
@@ -57,9 +95,11 @@ a, a:link, a:visited, a:active, a:hover {
 
 .p_nav_title{
     top: 80px;
+    margin-left: 30px;
     position: absolute;
     font-size: 30px;
     font-weight: bold;
+    vertical-align: center;
 }
 
 .nav_icon{
@@ -71,7 +111,8 @@ a, a:link, a:visited, a:active, a:hover {
 
 .p_nav_menu{
     position: absolute;
-    margin-top: 130px;
+    margin-top: 150px;
+    margin-left: 30px;
     height: 100%;
 
 }
@@ -82,21 +123,17 @@ a, a:link, a:visited, a:active, a:hover {
     cursor: pointer;
 }
 
-.p_nav_menu a:hover{
-    text-decoration: none;
-    color: gray;
-}
-
 .nav_onedep{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: normal;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .nav_twodep{
     font-size: 22px;
     display: none;
-    margin-left: 60px;
+    margin: -10px 0 10px 60px;
 }
 
 .nav_twodep a{
@@ -110,7 +147,7 @@ a, a:link, a:visited, a:active, a:hover {
     height: 60px;
     background-color: white;  
     position: fixed; 
-    z-index: 10;
+    z-index: 5;
     box-shadow: 0px 0px 8px 1px black;
 }
 
@@ -232,6 +269,10 @@ a, a:link, a:visited, a:active, a:hover {
     position: relative;
 }
 
+.p_lst a:hover{
+    color: black;
+}
+
 .p_lst_title{
     font-size: 30px;
 }
@@ -254,6 +295,14 @@ a, a:link, a:visited, a:active, a:hover {
 }
 
 @media (max-width:700px){
+    .p_header_btn{
+        width: 40px;
+        height: 40px;
+    }
+
+    .p_nav{
+        right: -410px;
+    }
 
     .p_nav_menu .nav_icon{
         height: 30px;
