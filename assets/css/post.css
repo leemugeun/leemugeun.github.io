@@ -1,6 +1,7 @@
 html{
     outline: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: sans-serif, Verdana, Geneva, Tahoma;
 }
 
 body{
