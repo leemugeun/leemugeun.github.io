@@ -292,7 +292,7 @@ p .highlighter-rouge, td .highlighter-rouge{
 }
 
 .p_lst_icon{
-    margin-bottom: 10px;
+    margin-top: 15px;
 }
 
 @media (max-width:700px){
@@ -350,16 +350,23 @@ p .highlighter-rouge, td .highlighter-rouge{
     }
 
     .p_lst_side{
-        margin-left: 60%;
+        margin-left: 45%;
         height: 40px;
         position: static;
     }
-
+    
     .p_lst_side img{
         height: 25px;
     }
 
     .p_lst_side p{
         display: inline-block;
+        margin-top: 3px;
+        position: absolute;
+    }
+    
+    .p_lst_icon{
+        margin-top: 7px;
+        margin-right: 10px;
     }
 }
