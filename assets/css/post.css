@@ -46,7 +46,7 @@ a, a:link, a:visited, a:active, a:hover {
     position: relative;
 }
 
-p .highlighter-rouge{
+p .highlighter-rouge, td .highlighter-rouge{
     font-family: sans-serif, Verdana, Geneva, Tahoma;
     color: #c7254e;
     background-color: #f9f2f4;
