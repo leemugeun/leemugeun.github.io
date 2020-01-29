@@ -2,7 +2,7 @@ $(document).ready(function(){
     pageOnload();
     hljs.initHighlightingOnLoad();
 
-    $("html").on("mousewheel DOMMouseScroll touchstart", function(e){
+    $("html").on("mousewheel DOMMouseScroll touchstart touchmove", function(e){
         var wheel = e.originalEvent.wheelDelta;
         var scroll = $(window).scrollTop();
         if (scroll > 80 && wheel < 0){
