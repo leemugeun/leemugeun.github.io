@@ -2,25 +2,38 @@ $(document).ready(function(){
     pageOnload();
     hljs.initHighlightingOnLoad();
 
-    $("html").on("mousewheel DOMMouseScroll touchstart touchmove", function(e){
-        var wheel = e.originalEvent.wheelDelta;
-        var touch = e.originalEvent.touches;
-        var scroll = $(window).scrollTop();
+    
 
+    $("html").on("mousewheel DOMMouseScroll", function(e){
+        var wheel = e.originalEvent.wheelDelta;
+        var scroll = $(window).scrollTop();
         if (scroll > 80 && wheel < 0){
             $("#p_header").hide();
         }
         else if (wheel > 0){
             $("#p_header").show();
         }
+    });
 
-        if (touch > 80 && wheel < 0){
+    var startX = 0, startY = 0, endX = 0,endY = 0;
+    $("html").on("touchstart", function(e){
+        startX = e.originalEvent.changedTouches[0].screenX;
+        startY = e.originalEvent.changedTouches[0].screenY;
+    })
+
+    $("html").on("touchend", function(e){
+        var scroll = $(window).scrollTop();
+        endX = e.originalEvent.changedTouches[0].screenX;
+        endY = e.originalEvent.changedTouches[0].screenY;
+
+        var gap = startY - endY;
+        if (scroll > 60 && gap > 0){
             $("#p_header").hide();
         }
-        else if (wheel > 0){
+        else if (gap < 0){
             $("#p_header").show();
         }
-    });
+    })
 });
 
 function pageOnload(){
