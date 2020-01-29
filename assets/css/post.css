@@ -165,17 +165,13 @@ p .highlighter-rouge, td .highlighter-rouge{
 .p_header_title {
     width:200px;
     height: 60px;
-    margin: 0 auto;
+    margin: 9px auto;
     position: absolute;
-    font-size: 40px;
+    font-size: 30px;
     left: 50%;
     text-align: center;
     transform: translateX(-50%);
     cursor: pointer;    
-}
-
-.p_header_title a:hover{
-    color: black;
 }
 
 .p_wrap hr{
@@ -319,7 +315,7 @@ p .highlighter-rouge, td .highlighter-rouge{
 
     .p_header_title{
         font-size: 25px;
-        padding-top: 13px;
+        margin-top: 12px;
     }
 
     .p_sub{
