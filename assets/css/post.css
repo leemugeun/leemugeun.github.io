@@ -299,6 +299,7 @@ p .highlighter-rouge, td .highlighter-rouge{
     .p_header_btn{
         width: 40px;
         height: 40px;
+        top: 9px;
     }
 
     .p_header_title{
