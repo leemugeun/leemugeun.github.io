@@ -292,9 +292,22 @@ p .highlighter-rouge, td .highlighter-rouge{
 }
 
 @media (max-width:700px){
+    .p_header{
+        height: 45px;
+    }
+    
     .p_header_btn{
         width: 40px;
         height: 40px;
+    }
+
+    .p_header_title{
+        font-size: 25px;
+        margin-top: 7px;
+    }
+
+    .p_header_btn img{
+        height: 30px;
     }
 
     .p_nav{
@@ -311,11 +324,6 @@ p .highlighter-rouge, td .highlighter-rouge{
 
     .nav_twodep{
         font-size: 18px;
-    }
-
-    .p_header_title{
-        font-size: 25px;
-        margin-top: 12px;
     }
 
     .p_sub{
