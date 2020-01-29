@@ -4,8 +4,17 @@ $(document).ready(function(){
 
     $("html").on("mousewheel DOMMouseScroll touchstart touchmove", function(e){
         var wheel = e.originalEvent.wheelDelta;
+        var touch = e.originalEvent.touches;
         var scroll = $(window).scrollTop();
+
         if (scroll > 80 && wheel < 0){
+            $("#p_header").hide();
+        }
+        else if (wheel > 0){
+            $("#p_header").show();
+        }
+
+        if (touch > 80 && wheel < 0){
             $("#p_header").hide();
         }
         else if (wheel > 0){
