@@ -39,6 +39,10 @@
                 {
                     "s_title":"Transaction",
                     "s_link":"/db/tran"
+                },
+                {
+                    "s_title":"Lock",
+                    "s_link":"/db/lock"
                 }
             ]
         }
