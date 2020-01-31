@@ -36,6 +36,10 @@ pre{
     border-radius: 4px;
 }
 
+code[class^="hljs"] {
+    background-color: transparent;
+}
+
 a, a:link, a:visited, a:active, a:hover {
     color: black;
     text-decoration: none;
