@@ -2,7 +2,7 @@
 layout: post
 title : DB
 icon: db
-postname : Database
+postname : Transaction
 permalink: /db/tran
 ---
 
