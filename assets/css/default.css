@@ -1,99 +1,68 @@
-/*
+html{
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: sans-serif, Verdana, Geneva, Tahoma;
+}
 
-Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
+body{
+  margin: 0px;
+}
 
-*/
+ul, li{
+  margin: 0px;
+  padding: 0px; 
+  list-style-type: none;
+}
 
-.hljs {
+h2{
+  font-weight: 500;
+}
+
+table{
+  font-size: 14px;
+}
+
+pre{
   display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  background: #F0F0F0;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-
-/* Base color: saturation 0; */
-
-.hljs,
-.hljs-subst {
-  color: #444;
+code[class^="hljs"] {
+  background-color: transparent;
 }
 
-.hljs-comment {
-  color: #888888;
+a, a:link, a:visited, a:active, a:hover {
+  color: black;
+  text-decoration: none;
 }
 
-.hljs-keyword,
-.hljs-attribute,
-.hljs-selector-tag,
-.hljs-meta-keyword,
-.hljs-doctag,
-.hljs-name {
-  font-weight: bold;
+.p_wrap{
+  width:100%;
+  height: 100%;
+  position: relative;
 }
 
-
-/* User color: hue: 0 */
-
-.hljs-type,
-.hljs-string,
-.hljs-number,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-quote,
-.hljs-template-tag,
-.hljs-deletion {
-  color: #880000;
+p .highlighter-rouge, td .highlighter-rouge{
+  font-family: sans-serif, Verdana, Geneva, Tahoma;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  padding: 2px 4px;
 }
 
-.hljs-title,
-.hljs-section {
-  color: #880000;
-  font-weight: bold;
+.highlight span{
+  font-family: sans-serif, Verdana, Geneva, Tahoma;
 }
 
-.hljs-regexp,
-.hljs-symbol,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-link,
-.hljs-selector-attr,
-.hljs-selector-pseudo {
-  color: #BC6060;
-}
-
-
-/* Language color: hue: 90; */
-
-.hljs-literal {
-  color: #78A960;
-}
-
-.hljs-built_in,
-.hljs-bullet,
-.hljs-code,
-.hljs-addition {
-  color: #397300;
-}
-
-
-/* Meta color: hue: 200 */
-
-.hljs-meta {
-  color: #1f7199;
-}
-
-.hljs-meta-string {
-  color: #4d99bf;
-}
-
-
-/* Misc effects */
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
+.p_container .md_img{
+  max-width: 100%;
+  height: auto;
 }
