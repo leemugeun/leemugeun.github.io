@@ -45,7 +45,7 @@ let SetCodehlight = () => {
                     elem.setAttribute("style", "color:#006600");
                 })
 
-            }, 300
+            }, 1000
         )
     }
 
@@ -65,7 +65,7 @@ let SetCodehlight = () => {
                     elem.setAttribute("style", "color:brown");
                 })
 
-            }, 300
+            }, 1000
         )
     }
 }
