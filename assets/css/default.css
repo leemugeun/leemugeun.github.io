@@ -62,6 +62,10 @@ p .highlighter-rouge, td .highlighter-rouge{
   font-family: sans-serif, Verdana, Geneva, Tahoma;
 }
 
+.highlight code{
+  font-family: sans-serif, Verdana, Geneva, Tahoma;
+}
+
 .p_container .md_img{
   max-width: 100%;
   height: auto;

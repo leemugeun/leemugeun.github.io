@@ -43,6 +43,10 @@
                 {
                     "s_title":"Lock",
                     "s_link":"/db/lock"
+                },
+                {
+                    "s_title":"(MS)Set Xml",
+                    "s_link":"/db/setxml"
                 }
             ]
         }
