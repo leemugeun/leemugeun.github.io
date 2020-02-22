@@ -1,11 +1,12 @@
 $(document).ready(function(){
-    SetCodehlight();
+    SetCodehighlight();
 });
 
-let SetCodehlight = () => {
+let SetCodehighlight = () => {
 
     // SQL
     let sql_cnt = document.querySelectorAll("#p_container .language-sql").length;
+    let timer = 300;
 
     if (sql_cnt > 0){
         setTimeout(() => {
@@ -45,7 +46,7 @@ let SetCodehlight = () => {
                     elem.setAttribute("style", "color:#006600");
                 })
 
-            }, 1000
+            }, timer
         )
     }
 
@@ -65,7 +66,7 @@ let SetCodehlight = () => {
                     elem.setAttribute("style", "color:brown");
                 })
 
-            }, 1000
+            }, timer
         )
     }
 }
