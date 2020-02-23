@@ -72,6 +72,10 @@
     margin: -10px 0 10px 60px;
 }
 
+.nav_twodep li{
+    margin-top: 7px;
+}
+
 .nav_twodep li a{
     color: gray;
 }

@@ -47,6 +47,10 @@
                 {
                     "s_title":"(MS)Set Xml",
                     "s_link":"/db/setxml"
+                },
+                {
+                    "s_title":"(MS)Service Broker",
+                    "s_link":"/db/msservicebroker"
                 }
             ]
         }

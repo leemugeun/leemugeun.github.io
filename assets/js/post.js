@@ -1,6 +1,5 @@
 $(document).ready(function(){
     pageOnload();
-    //hljs.initHighlightingOnLoad();
 
     $("html").on("mousewheel DOMMouseScroll", function(e){
         var wheel = e.originalEvent.wheelDelta;

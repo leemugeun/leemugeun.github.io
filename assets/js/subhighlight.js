@@ -16,9 +16,9 @@ let SetCodehighlight = () => {
                 let comment = document.querySelectorAll("#p_container .language-sql .hljs-comment");
 
                 keyword.forEach((elem, idx, arr) => {
-                    let blue = ["declare", "begin", "end", "commit", "select", "from", "where", "set", "and", "int", "nvarchar", "char", "group", "order", "by", "for", "xml", "with", "as"];
+                    let blue = ["declare", "begin", "end", "commit", "select", "from", "where", "set", "and", "int", "nvarchar", "char", "group", "order", "by", "for", "xml", "with", "as", "union"];
                     let pink = ["update", "max", "convert"];
-                    let txt = arr[idx].innerText;
+                    let txt = arr[idx].innerText.toLowerCase();
                     
                     if (blue.filter(e => e == txt).length > 0){
                         arr[idx].setAttribute("style", "color:blue");
@@ -63,7 +63,7 @@ let SetCodehighlight = () => {
                 })
 
                 attr.forEach((elem, idx, arr) => {
-                    elem.setAttribute("style", "color:brown");
+                    elem.setAttribute("style", "color:red");
                 })
 
             }, timer
