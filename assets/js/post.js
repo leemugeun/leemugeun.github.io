@@ -1,17 +1,17 @@
-$(document).ready(function(){
+window.onload = () => {
     pageOnload();
 
-    $("html").on("mousewheel DOMMouseScroll", function(e){
-        var wheel = e.originalEvent.wheelDelta;
-        var scroll = $(window).scrollTop();
+    document.querySelector("#p_wrap").addEventListener("mousewheel", () => {
+        let wheel = event.wheelDelta;
+        let scroll = $(window).scrollTop();
         if (scroll > 80 && wheel < 0){
-            $("#p_header").hide();
+            document.querySelector("#p_header").hidden = true;
         }
         else if (wheel > 0){
-            $("#p_header").show();
+            document.querySelector("#p_header").hidden = false;
         }
     });
-});
+}
 
 function pageOnload(){
     $.each($("#p_container img"), function(){
