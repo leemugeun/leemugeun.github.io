@@ -22,12 +22,12 @@ function pageOnload(){
 
     $("#p_nav_menu [data-navdep='1']").click(function(){
         if ($(this).siblings("ul").is(":visible")){
-            $(this).siblings("ul").hide(300)
+            $(this).siblings("ul").hide()
             return;
         }
 
-        $("#p_nav_menu [data-navdep='2']").hide(300);
-        $(this).siblings().show(300);
+        $("#p_nav_menu [data-navdep='2']").hide();
+        $(this).siblings().show();
     })
 }
 
@@ -53,7 +53,7 @@ function openNav() {
 
 function closeNav(){
     $("#p_bg_black").hide();
-    $("#p_nav_menu [data-navdep='2']").hide(300);
+    $("#p_nav_menu [data-navdep='2']").hide();
 
     if ($("body").width() > 700 ){
         $("#p_wrap").animate({

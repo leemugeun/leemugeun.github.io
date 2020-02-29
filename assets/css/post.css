@@ -18,6 +18,7 @@
     background-color: white;
     right: -380px;
     z-index: 100;
+    overflow-y: scroll;
 }
 
 .p_nav_btn{
