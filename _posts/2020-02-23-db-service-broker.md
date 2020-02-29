@@ -155,9 +155,9 @@ end
 ## Select Queue information
 
 Request Message 주석 실행문을 실행 했다면 Basic_PlayerProcessingQueue에 내용이 담겨있는데 다음과 같이 Queue의 내용을 확인해 볼 수 있으며, 내용은 다음과 같을 것입니다.  
-service_name(Queue에 매칭된 Service) : `http://www.lmgproject.com/InsideDemos/PlayerProcessingService`  
-service_contract_name(통신시 이루어 진 Contract) : `http://www.lmgproject.com/InsideDemos/PlayerAsyncContract`  
-message_type_name(송신한 Message 이름) : `http://www.lmgproject.com/InsideDemos/PlayerAsyncRequest`  
+service_name(Queue에 매칭된 Service) : ~/InsideDemos/PlayerProcessingService  
+service_contract_name(통신시 이루어 진 Contract) : ~/InsideDemos/PlayerAsyncContract  
+message_type_name(송신한 Message 이름) : ~/InsideDemos/PlayerAsyncRequest  
 message_body(Message 내용 - @msg): 0x3C006D0067007...
 
 ```sql
