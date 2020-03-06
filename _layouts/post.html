@@ -15,6 +15,7 @@
             <div id="p_nav_menu" class="p_nav_menu">
                 {% for item in site.data.menu.list %}
                 <ul>
+                    {% if item.title != "Profile" %}
                     <li data-navdep="1" class="nav_onedep">
                         <img class="nav_icon" src={{item.icon}} height="27">
                         {% if item.title == "Main" %}
@@ -23,6 +24,7 @@
                         {{ item.title }}
                         {% endif %}
                     </li>
+                    {% endif %}
 
                     {% if item.sub_yn == "Y" %}
                     <ul data-navdep="2" class="nav_twodep">
@@ -66,7 +68,7 @@
                     {% if page.title == "Main" %}
                     <div>
                         {% for post in site.posts %}
-                        {% if post.title != "Main" %}
+                        {% if post.title != "Main" and post.title != "Profile" %}
                           <div class="p_lst">
                             <a href="{{ post.url }}">
                                 <p class="p_lst_title">{{ post.postname }}</p>

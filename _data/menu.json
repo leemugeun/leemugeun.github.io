@@ -7,6 +7,13 @@
             "sub_yn" : "N"
         },
         {
+            "title":"Profile",
+            "link":"/profile",
+            "icon": "main",
+            "sub_yn" : "N",
+            "sub":""
+        },
+        {
             "title":"Git",
             "link":"/git",
             "icon": "/files/nav/git.png",

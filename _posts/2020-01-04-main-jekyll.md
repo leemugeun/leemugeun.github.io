@@ -114,7 +114,7 @@ http://localhost:4000/
 개발중 어려움이 있을 경우 Url에서 참고 바랍니다
 
 Jekyll Reference : <https://jekyllrb-ko.github.io/>  
-Liquid Syntax : <https://www.markdownguide.org/basic-syntax/>  
+Liquid Syntax : <https://help.shopify.com/en/themes/liquid/basics>  
 Markdown Systax : <https://www.markdownguide.org/basic-syntax/>, <https://docs.microsoft.com/ko-kr/contribute/how-to-write-use-markdown>  
 Markdown code highlight : <https://highlightjs.org/download/>  
 Front-end guide : <https://poiemaweb.com/>
