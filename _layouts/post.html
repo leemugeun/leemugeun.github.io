@@ -39,7 +39,7 @@
         </nav>
         <div id="p_bg_black" class="p_bg_black"></div>
         <div id="p_wrap" class="p_wrap">
-            <div id="p_header" class="p_header">
+            <header id="p_header" class="p_header">
                 <div class="p_header_title">
                     <a href="/" onclick="window.scrollTo(0,0);">
                         <span><strong>M</strong> Tech</span>
@@ -50,7 +50,7 @@
                         <img src="{{ site.files }}/menu.png" height="40">
                     </a>
                 </div>
-            </div>
+            </header>
 
             {% for item in site.data.menu.list %}
             {% if item.title == page.title %}
@@ -66,23 +66,21 @@
                 </div>
                 <div id="p_container" class="p_container">
                     {% if page.title == "Main" %}
-                    <div>
                         {% for post in site.posts %}
                         {% if post.title != "Main" and post.title != "Profile" %}
-                          <div class="p_lst">
+                          <article class="p_lst">
                             <a href="{{ post.url }}">
                                 <p class="p_lst_title">{{ post.postname }}</p>
-                                <p class="p_lst_txt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                                <p class="p_lst_txt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
 
                                 <div class="p_lst_side">
                                     <img class="p_lst_icon" src="/files/nav/{{ post.icon }}.png" height="50" />
                                     <p>{{ post.date |  date: '%Y-%m-%d' }}</p>
                                 </div>
                             </a>
-                          </div>
+                          </article>
                           {% endif %}  
                         {% endfor %}
-                    </div>
                     {% else %}
                         {{ content }}
                     {% endif %}

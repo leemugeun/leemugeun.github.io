@@ -31,24 +31,6 @@ table{
   font-size: 14px;
 }
 
-pre{
-  display: block;
-  padding: 9.5px;
-  margin: 0 0 10px;
-  font-size: 13px;
-  line-height: 1.42857143;
-  color: #333;
-  word-break: break-all;
-  word-wrap: break-word;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-code[class^="hljs"] {
-  background-color: transparent;
-}
-
 a, a:link, a:visited, a:active, a:hover {
   color: black;
   text-decoration: none;
@@ -60,22 +42,22 @@ a, a:link, a:visited, a:active, a:hover {
   position: relative;
 }
 
-p .highlighter-rouge, td .highlighter-rouge{
-  font-family: sans-serif, Verdana, Geneva, Tahoma;
-  color: #c7254e;
-  background-color: #f9f2f4;
-  padding: 2px 4px;
-}
-
-.highlight span{
-  font-family: sans-serif, Verdana, Geneva, Tahoma;
-}
-
-.highlight code{
-  font-family: sans-serif, Verdana, Geneva, Tahoma;
-}
-
 .p_container .md_img{
   max-width: 100%;
   height: auto;
+}
+
+/* High light */
+p .highlighter-rouge, td .highlighter-rouge{
+  font-family: sans-serif, Verdana, Geneva, Tahoma;
+  color: #c7254e;
+}
+
+code{
+  font-family: sans-serif, Verdana, Geneva, Tahoma;
+}
+
+pre{
+  border: 1px solid black;
+  border-radius: 4px;
 }

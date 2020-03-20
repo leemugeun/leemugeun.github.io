@@ -60,6 +60,18 @@
                     "s_link":"/db/msservicebroker"
                 }
             ]
+        },
+        {
+            "title":"Theory",
+            "link":"/theory",
+            "icon": "/files/nav/theory.png",
+            "sub_yn" : "Y",
+            "sub":[
+                {
+                    "s_title":"Theory",
+                    "s_link":"/theory/diioc"
+                }
+            ]
         }
     ]
 }
