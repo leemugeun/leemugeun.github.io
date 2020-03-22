@@ -28,7 +28,14 @@ function pageOnload(){
 
         $("#p_nav_menu [data-navdep='2']").hide();
         $(this).siblings().show();
-    })
+    });
+
+    if ($("#banner").is(":visible")){
+        $("#cont_title").css("margin-top", "");
+    }
+    else{
+        $("#cont_title").css("margin-top", "70px");
+    }
 }
 
 function openNav() {

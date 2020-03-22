@@ -53,13 +53,13 @@
             </header>
 
             {% if page.title == "Main" %}
-            <div class="p_sub" style="background-image: url('/files/ban/{{ page.icon }}.jpg')">
+            <div id="banner" class="p_sub" style="background-image: url('/files/ban/{{ page.icon }}.jpg')">
                 <div class="sub_txt">Tech Guide</div>
             </div>
             {% endif %}
             
             <div class="p_container_wrap">
-                <div class="p_container_title">
+                <div id="cont_title" class="p_container_title">
                     {{ page.postname }} Posting
                 </div>
                 <div id="p_container" class="p_container">

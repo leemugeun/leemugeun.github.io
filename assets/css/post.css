@@ -150,7 +150,7 @@
 }
 
 .p_sub .sub_txt{
-    margin: 140px auto;
+    margin: 170px auto;
     width: 100%;
     font-size: 100px;
     color: white;
@@ -165,7 +165,6 @@
 /* Inner */
 
 .p_container_wrap{
-    /* margin-top : 50px; */
     min-height: 500px;
     background-color: #ddd;
     position: relative;
@@ -175,7 +174,6 @@
 }
 
 .p_container_title{
-    margin-top: 70px;
     max-width: 1200px;
     height: 50px;
     position: relative;
