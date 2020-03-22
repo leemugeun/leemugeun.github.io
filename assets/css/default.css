@@ -24,6 +24,7 @@ ul, li{
 }
 
 h2{
+  font-size: 30px;
   font-weight: 500;
 }
 
@@ -60,4 +61,5 @@ code{
 pre{
   border: 1px solid black;
   border-radius: 4px;
+  font-size: 14px;
 }
