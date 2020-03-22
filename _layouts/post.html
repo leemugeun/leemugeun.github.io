@@ -9,8 +9,8 @@
                 </a>
             </div>
             <div class="p_nav_title">
-                <img class="nav_icon" src="{{ site.files }}/nav/navigation.png" height="40">
-                Navigation
+                <img class="nav_icon" src="{{ site.files }}/nav/navigation.png" height="35">
+                <span>Navigation</span>
             </div>
             <div id="p_nav_menu" class="p_nav_menu">
                 {% for item in site.data.menu.list %}
@@ -42,7 +42,7 @@
             <header id="p_header" class="p_header">
                 <div class="p_header_title">
                     <a href="/" onclick="window.scrollTo(0,0);">
-                        <span><strong>M</strong> Tech</span>
+                        <span>Tech</span>
                     </a>
                 </div>
                 <div class="p_header_btn">
@@ -52,13 +52,11 @@
                 </div>
             </header>
 
-            {% for item in site.data.menu.list %}
-            {% if item.title == page.title %}
+            {% if page.title == "Main" %}
             <div class="p_sub" style="background-image: url('/files/ban/{{ page.icon }}.jpg')">
-                <div class="sub_txt">{{ page.title }}</div>
+                <div class="sub_txt">Tech Guide</div>
             </div>
             {% endif %}
-            {% endfor %}
             
             <div class="p_container_wrap">
                 <div class="p_container_title">

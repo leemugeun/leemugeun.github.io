@@ -5,10 +5,10 @@ window.onload = () => {
         let wheel = event.wheelDelta;
         let scroll = $(window).scrollTop();
         if (scroll > 80 && wheel < 0){
-            document.querySelector("#p_header").hidden = true;
+            $("#p_header").hide();
         }
         else if (wheel > 0){
-            document.querySelector("#p_header").hidden = false;
+            $("#p_header").show();
         }
     });
 }

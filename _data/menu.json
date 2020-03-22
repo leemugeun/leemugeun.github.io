@@ -62,14 +62,14 @@
             ]
         },
         {
-            "title":"Theory",
-            "link":"/theory",
-            "icon": "/files/nav/theory.png",
+            "title":"Spring",
+            "link":"/spring",
+            "icon": "/files/nav/spring.png",
             "sub_yn" : "Y",
             "sub":[
                 {
-                    "s_title":"Theory",
-                    "s_link":"/theory/diioc"
+                    "s_title":"DI/IOC",
+                    "s_link":"/spring/diioc"
                 }
             ]
         }
