@@ -229,6 +229,37 @@
     margin-top: 15px;
 }
 
+/* Calender */
+.cldr_year{
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cldr_month{
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cldr_opc{
+    color:#383fe9;
+}
+
+.cldr_mg{
+    color:#ff0000;
+}
+
+.cldr{
+    min-width:900px;
+    text-align: center;
+    margin: auto auto 50px auto;
+}
+
+.cldr tr td{
+    height: 50px;
+}
+
 @media (max-width:700px){
 
     /* Header */
@@ -320,5 +351,31 @@
     .p_lst_icon{
         margin-top: 7px;
         margin-right: 10px;
+    }
+
+    /* Calender */
+    .cldr_year{
+        font-size: 25px;
+    }
+    
+    .cldr_month{
+        font-size: 17px;
+    }
+
+    .cldr_opc{
+        font-size: 12px;
+    }
+    
+    .cldr_mg{
+        font-size: 12px;
+    }
+    
+    .cldr{
+        min-width:300px;
+        margin: auto auto 20px auto;
+    }
+    
+    .cldr tr td{
+        height: 50px;
     }
 }
