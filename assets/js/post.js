@@ -1,19 +1,8 @@
 $(document).ready(function() {
     pageOnload();
 
-    document.querySelector("#p_wrap").addEventListener("mousewheel", () => {
-        let wheel = event.wheelDelta;
-        let scroll = $(window).scrollTop();
-        if (scroll > 80 && wheel < 0){
-            $("#p_header").hide();
-        }
-        else if (wheel > 0){
-            $("#p_header").show();
-        }
-    });
-
     setCalender();
-})
+});
 
 function pageOnload(){
     $.each($("#p_container img"), function(){
@@ -83,25 +72,25 @@ function closeNav(){
 
 function setCalender() {
     if (location.href.toLowerCase().indexOf("calender") > -1){
-        let html = "";
-        let dt = new Date();
-        let year = dt.getFullYear();
-        let next_year = dt.getFullYear() + 2;
-        let date = dt.getDate();
-        let day = dt.getDay(); // 0 : 일 ~ 6 : 토
-        let opc_day = 1;
-        let mg_hday = 0;
+        var html = "";
+        var dt = new Date();
+        var year = dt.getFullYear();
+        var next_year = dt.getFullYear() + 2;
+        var date = dt.getDate();
+        var day = dt.getDay(); // 0 : 일 ~ 6 : 토
+        var opc_day = 1;
+        var mg_hday = 0;
 
         // 연단위
         while (year < next_year){
-             let month = 1;
+            var month = 1;
 
              html += "<div class=\"cldr_year\">" + year + "년</div>";
 
             // 연간 월수
             while (month < 13){
-                let month_date = 1;
-                let month_total_date = new Date(year, month, 0).getDate();
+                var month_date = 1;
+                var month_total_date = new Date(year, month, 0).getDate();
 
                 html += "<div class=\"cldr_month\">" + month + "월</div>";
                 html += "<table class=\"cldr\">";
@@ -117,9 +106,9 @@ function setCalender() {
 
                 // 월간 일수
                 while (month_total_date > 0){
-                    let month_day = new Date(year + "-" + month + "-" + month_date).getDay();
-                    let innr = "";
-                    let day_txt = "";
+                    var month_day = new Date(year + "/" + month + "/" + month_date).getDay();
+                    var innr = "";
+                    var day_txt = "";
 
                     opc_day = opc_day > 5 ? 1 : opc_day;
                     mg_hday = mg_hday > 5 ? 1 : mg_hday;
@@ -136,7 +125,7 @@ function setCalender() {
                     
                     // 1주 내용
                     if (month_date == 1){
-                        for (let wNum = 0; wNum < 7; wNum++){
+                        for (var wNum = 0; wNum < 7; wNum++){
                             if (wNum == month_day){
                                 break;
                             }
