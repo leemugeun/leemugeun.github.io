@@ -70,7 +70,7 @@
 .nav_twodep{
     font-size: 22px;
     display: none;
-    margin: -10px 0 10px 60px;
+    margin: 5px 0 10px 0px;
 }
 
 .nav_twodep li{
@@ -192,7 +192,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 30px 30px 30px 30px;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 30px;
 }
 

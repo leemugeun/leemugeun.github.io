@@ -13,12 +13,12 @@ permalink: /db/msservicebroker
 여기서는 `http://www.lmgproject.com/InsideDemos/`을 네이밍 규칙으로 지정하여 만들겠습니다. 이 Url은 존재하지 않으며 접속도 불가능한 Url 입니다.
 
 `Service Broker`를 이해하기 위해선 다음의 개념을 잘 알아야 합니다.  
-Service(서비스) : 메시지를 전달하기 위한 통신매개 수단 / Contract조건에 맞는 Message Type으로 전달합니다
-Queue(큐) : 메시지를 전달받아 저장해놓는 장소(테이블 같은 존재) / Contract조건에 맞게 처리된 메시지를 받습니다  
-Contract(계약) : 메시지를 전송자와 수신자를 설정해놓는 계약(`Servie Broker`수행시 메시지간의 계약에 의해 데이터가 처리됩니다)
-Message(메시지) : 통신하면서 주고받을 메시지(Xml데이터) 입니다. 송/수신할 메시지 타입을 결정할 수 있습니다(Ex - Xml, None)
+**Service(서비스)** : 메시지를 전달하기 위한 통신매개 수단 / Contract조건에 맞는 Message Type으로 전달합니다  
+**Queue(큐)** : 메시지를 전달받아 저장해놓는 장소(테이블 같은 존재) / Contract조건에 맞게 처리된 메시지를 받습니다  
+**Contract(계약)** : 메시지를 전송자와 수신자를 설정해놓는 계약(`Servie Broker`수행시 메시지간의 계약에 의해 데이터가 처리됩니다)  
+**Message(메시지)** : 통신하면서 주고받을 메시지(Xml데이터) 입니다. 송/수신할 메시지 타입을 결정할 수 있습니다(Ex - Xml, None)
 
-## Start Service Broker
+## Start Service Broker(Example)
 
 Service Broker의 실행방식은 두 Service간의 통신이며(Ex - A, B) A Service에 종속된 Queue의 값을 B Service로 보내서 B Service에 종속된 Queue에 데이터를 전달하는 것 입니다.  
 통신시에 전달되는 Message는 Contract에서 설정한 송신자(initiator)와 수신자(target)의 계약내용을 따릅니다.  

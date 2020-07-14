@@ -17,7 +17,7 @@ nav::-webkit-scrollbar{
   display: none;
 }
 
-ul, li{
+.p_nav ul li{
   margin: 0px;
   padding: 0px; 
   list-style-type: none;
@@ -26,6 +26,10 @@ ul, li{
 h2{
   font-size: 30px;
   font-weight: 500;
+}
+
+h4{
+  text-align:center;
 }
 
 table{
@@ -46,6 +50,7 @@ a, a:link, a:visited, a:active, a:hover {
 .p_container .md_img{
   max-width: 100%;
   height: auto;
+  margin: 20px auto 20px auto;
 }
 
 /* High light */

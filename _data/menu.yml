@@ -1,0 +1,55 @@
+---
+list:
+- title: Main
+  icon: "/files/nav/main.png"
+  sub_yn: N
+
+- title: Profile
+  icon: main
+  sub_yn: N
+  sub: ''
+
+- title: Git
+  icon: "/files/nav/git.png"
+  sub_yn: Y
+  sub:
+  - s_title: Git CMD
+    s_link: "/git"
+
+- title: Jekyll
+  icon: "/files/nav/jekyll.png"
+  sub_yn: Y
+  sub:
+  - s_title: Jekyll Init
+    s_link: "/jekyll"
+
+- title: DB
+  icon: "/files/nav/db.png"
+  sub_yn: Y
+  sub:
+  - s_title: Transaction
+    s_link: "/db/tran"
+  - s_title: Lock
+    s_link: "/db/lock"
+  - s_title: "(MS)Set Xml"
+    s_link: "/db/setxml"
+  - s_title: "(MS)Service Broker"
+    s_link: "/db/msservicebroker"
+    
+- title: Spring
+  icon: "/files/nav/spring.png"
+  sub_yn: Y
+  sub:
+  - s_title: DI/IOC
+    s_link: "/spring/diioc"
+
+- title: Web
+  icon: "/files/nav/web.png"
+  sub_yn: Y
+  sub:
+  - s_title: Rest/Rest API
+    s_link: "/web/rest"
+  - s_title: Http Protocol
+    s_link: "/web/http"
+  - s_title: OSI 7 Layer
+    s_link: "/web/osi7layer"

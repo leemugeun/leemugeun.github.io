@@ -7,7 +7,7 @@ $(document).ready(function() {
 function pageOnload(){
     $.each($("#p_container img"), function(){
         if ($(this).attr("class") == undefined){
-            $(this).addClass("md_img");
+            $(this).addClass("md_img").wrap("<div style='text-align:center'></div>")
         }
     })
 
@@ -75,9 +75,8 @@ function setCalender() {
         var html = "";
         var dt = new Date();
         var year = dt.getFullYear();
+        var now_date = year + "/" + (dt.getMonth() + 1) + "/" + dt.getDate();
         var next_year = dt.getFullYear() + 2;
-        var date = dt.getDate();
-        var day = dt.getDay(); // 0 : 일 ~ 6 : 토
         var opc_day = 1;
         var mg_hday = 0;
 
@@ -106,7 +105,9 @@ function setCalender() {
 
                 // 월간 일수
                 while (month_total_date > 0){
+                    // 0 : 일 ~ 6 : 토
                     var month_day = new Date(year + "/" + month + "/" + month_date).getDay();
+                    var loop_date = year + "/" + month + "/" + month_date;
                     var innr = "";
                     var day_txt = "";
 
@@ -145,7 +146,18 @@ function setCalender() {
                         }
                     }
                     
-                    day_txt = innr == "" ? month_date : month_date + innr;
+                    if (innr == ""){
+                        if (now_date == loop_date){
+                            day_txt = "<b>" + month_date + "</b>";
+                        }
+                        else{
+                            day_txt += month_date;
+                        }
+                    }
+                    else{
+                        day_txt += (month_date + innr);
+                    }
+
                     html += "<td>" + day_txt + "</td>";
 
                     // 1주 라인
