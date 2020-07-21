@@ -1,7 +1,7 @@
 ---
 layout: post
 title : Index
-icon: DB
+icon: db
 permalink: /db/msindex
 ---
 
