@@ -52,7 +52,7 @@
                 </div>
             </header>
 
-            {% if page.title == "Main" %}
+            {% if page.title == "Blog" %}
             <div id="banner" class="p_sub" style="background-image: url('/files/ban/{{ page.icon }}.jpg')">
                 <div class="sub_txt">Guide</div>
             </div>
@@ -60,15 +60,15 @@
             
             <div class="p_container_wrap">
                 <div id="cont_title" class="p_container_title">
-                    {{ page.postname }} Posting
+                    {{ page.title }} Posting
                 </div>
                 <div id="p_container" class="p_container">
-                    {% if page.title == "Main" %}
+                    {% if page.title == "Blog" %}
                         {% for post in site.posts %}
                         {% if post.expose_yn == null %}
                           <article class="p_lst">
                             <a href="{{ post.url }}">
-                                <p class="p_lst_title">{{ post.postname }}</p>
+                                <p class="p_lst_title">{{ post.title }}</p>
                                 <p class="p_lst_txt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
 
                                 <div class="p_lst_side">

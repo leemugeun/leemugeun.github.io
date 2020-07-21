@@ -1,8 +1,7 @@
 ---
 layout: post
-title : DB
+title : Transaction
 icon: db
-postname : Transaction
 permalink: /db/tran
 ---
 

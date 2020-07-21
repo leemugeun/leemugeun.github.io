@@ -1,8 +1,7 @@
 ---
 layout: post
-title : Spring
+title : DI / IOC
 icon: spring
-postname : DI / IOC
 permalink: /spring/diioc
 ---
 

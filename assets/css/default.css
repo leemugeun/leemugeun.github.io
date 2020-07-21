@@ -28,6 +28,11 @@ h2{
   font-weight: 500;
 }
 
+h3{
+  font-size: 22px;
+  font-weight: 500;
+}
+
 h4{
   text-align:center;
 }
@@ -54,9 +59,10 @@ a, a:link, a:visited, a:active, a:hover {
 }
 
 /* High light */
-p .highlighter-rouge, td .highlighter-rouge{
+.highlighter-rouge{
   font-family: sans-serif, Verdana, Geneva, Tahoma;
-  color: #c7254e;
+  color: red;
+  font-weight: bold;
 }
 
 code{

@@ -1,8 +1,7 @@
 ---
 layout: post
-title : DB
+title : (MSSQL)Service Broker
 icon: db
-postname : (MSSQL)Service Broker
 permalink: /db/msservicebroker
 ---
 

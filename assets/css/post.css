@@ -261,6 +261,9 @@
 }
 
 @media (max-width:700px){
+    #p_container ul{
+        padding-left: 10px;
+    }
 
     /* Header */
     .p_header{
