@@ -59,7 +59,7 @@ a, a:link, a:visited, a:active, a:hover {
 
 /* High light */
 code{
-  font-family: consolas;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
   font-weight: normal;
   line-height: 20px;
 }
@@ -70,7 +70,7 @@ code[class="highlighter-rouge"], code[class="language-plaintext highlighter-roug
   background-color: #e3e3e3;
   padding: 1px 5px 1px 5px;
   margin:0px 2px 0px 2px;
-  font-family: consolas;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
 }
 
 pre{
