@@ -12,17 +12,17 @@ permalink: /db/msservicebroker
 여기서는 `http://www.lmgproject.com/InsideDemos/`을 네이밍 규칙으로 지정하여 만들겠습니다. 이 Url은 존재하지 않으며 접속도 불가능한 Url 입니다.
 
 `Service Broker`를 이해하기 위해선 다음의 개념을 잘 알아야 합니다.  
-**Service(서비스)** : 메시지를 전달하기 위한 통신매개 수단 / Contract조건에 맞는 Message Type으로 전달합니다  
-**Queue(큐)** : 메시지를 전달받아 저장해놓는 장소(테이블 같은 존재) / Contract조건에 맞게 처리된 메시지를 받습니다  
-**Contract(계약)** : 메시지를 전송자와 수신자를 설정해놓는 계약(`Servie Broker`수행시 메시지간의 계약에 의해 데이터가 처리됩니다)  
-**Message(메시지)** : 통신하면서 주고받을 메시지(Xml데이터) 입니다. 송/수신할 메시지 타입을 결정할 수 있습니다(Ex - Xml, None)
+`Service(서비스)` : 메시지를 전달하기 위한 통신매개 수단 / Contract조건에 맞는 Message Type으로 전달합니다  
+`Queue(큐)` : 메시지를 전달받아 저장해놓는 장소(테이블 같은 존재) / Contract조건에 맞게 처리된 메시지를 받습니다  
+`Contract(계약)` : 메시지를 전송자와 수신자를 설정해놓는 계약(`Servie Broker`수행시 메시지간의 계약에 의해 데이터가 처리됩니다)  
+`Message(메시지)` : 통신하면서 주고받을 메시지(Xml데이터) 입니다. 송/수신할 메시지 타입을 결정할 수 있습니다(Ex - Xml, None)
 
 ## Start Service Broker(Example)
 
 Service Broker의 실행방식은 두 Service간의 통신이며(Ex - A, B) A Service에 종속된 Queue의 값을 B Service로 보내서 B Service에 종속된 Queue에 데이터를 전달하는 것 입니다.  
 통신시에 전달되는 Message는 Contract에서 설정한 송신자(initiator)와 수신자(target)의 계약내용을 따릅니다.  
 
-아래의 작업실행시 DB하위의 Service Broker폴더의 메시지유형(Message), 계약(Contract), 큐(Queue), 서비스(Service)폴더에서 확인이 가능합니다. 각 내용을 생성시 실시간으로 보여지지 않으므로 DB에 우클릭 후 **새로고침**을 클릭 한 후에 다시 폴더로 가서 확인해 봅니다.  
+아래의 작업실행시 DB하위의 Service Broker폴더의 메시지유형(Message), 계약(Contract), 큐(Queue), 서비스(Service)폴더에서 확인이 가능합니다. 각 내용을 생성시 실시간으로 보여지지 않으므로 DB에 우클릭 후 `새로고침`을 클릭 한 후에 다시 폴더로 가서 확인해 봅니다.  
 
 ## Use Service Broker
 
@@ -34,10 +34,10 @@ alter database project set enable_broker
 
 ## Create Message Type
 
-Service Broker로 사용할 메시지의 이름을 생성하며 **validation**설정으로 타입을 고정할 수 있습니다.  
+Service Broker로 사용할 메시지의 이름을 생성하며 `validation`설정으로 타입을 고정할 수 있습니다.  
 well_formed_xml로 타입을 설정하면 xml로 타입이 고정됩니다.  
 
-**Message Type** : [https://docs.microsoft.com/ko-kr/sql/t-sql/statements/create-message-type-transact-sql?view=sql-server-ver15][sb-message-type]
+`Message Type` : [https://docs.microsoft.com/ko-kr/sql/t-sql/statements/create-message-type-transact-sql?view=sql-server-ver15][sb-message-type]
 
 ```sql
 --Message Type 생성
@@ -55,7 +55,7 @@ go
 메시지를 주고받는 Contract를 생성합니다.  
 아래의 계약내용에 따르면 `~/PlayerAsyncRequest`가 전송하는 메시지 이며 `~/PlayerAsyncResult`가 수신하는 메시지 입니다.  
 
-**Create contract** : [https://docs.microsoft.com/ko-kr/sql/t-sql/statements/create-contract-transact-sql?view=sql-server-ver15][sb-create-contract]
+`Create contract` : [https://docs.microsoft.com/ko-kr/sql/t-sql/statements/create-contract-transact-sql?view=sql-server-ver15][sb-create-contract]
 
 ```sql
 --Contract 생성
@@ -73,8 +73,8 @@ Queue와 Service를 생성하여 직접 통신할 수 있는 수단을 만듭니
 Queue와 Service는 1:1로 매칭되며 1개의 Service에 처리될 1개의 Queue를 설정합니다.  
 `~/PlayerProcessingService` Service에서는 `~/PlayerAsyncContract` Contract를 추가하였는데, 해당 Queue에서 `~/PlayerRequestService` Service를 받기 때문에 송/수신 Contract내용을 추가했습니다
 
-**Create queue** : [https://docs.microsoft.com/ko-kr/sql/t-sql/statements/create-queue-transact-sql?view=sql-server-ver15][sb-create-queue]  
-**Create service** : [https://docs.microsoft.com/ko-kr/sql/t-sql/statements/create-service-transact-sql?view=sql-server-ver15][sb-create-service]
+`Create queue` : [https://docs.microsoft.com/ko-kr/sql/t-sql/statements/create-queue-transact-sql?view=sql-server-ver15][sb-create-queue]  
+`Create service` : [https://docs.microsoft.com/ko-kr/sql/t-sql/statements/create-service-transact-sql?view=sql-server-ver15][sb-create-service]
 
 ```sql
 --Request Queue생성
@@ -100,12 +100,12 @@ go
 
 위의 스크립트로 Message, Contract, Queue, Service를 생성하였으므로 `~/PlayerRequestService`에서 `~/PlayerProcessingService`로 메시지를 전송하는 스크립트를 작성하면 다음과 같이 됩니다.  
 이렇게 되면 `~/PlayerProcessingService`로 통신요청을 했기 때문에 이 Service에 해당하는 Queue(Basic_PlayerProcessingQueue)로 데이터를 받아오며, Select문으로 이 내용을 확인해볼 수 있습니다.  
-메시지를 전송하기 때문에 Message Type을 **~/PlayerAsyncRequest**로 설정했습니다.  
-**@handle**값은 두 Service간의 통신내용을 담고있으며, Servie를 제어할 수 있는 값입니다. begin dialog @handle ~... 로 서비스 통신을 핸들링하는 내용을 설정했습니다.  
+메시지를 전송하기 때문에 Message Type을 `~/PlayerAsyncRequest`로 설정했습니다.  
+`@handle`값은 두 Service간의 통신내용을 담고있으며, Servie를 제어할 수 있는 값입니다. begin dialog @handle ~... 로 서비스 통신을 핸들링하는 내용을 설정했습니다.  
 
 이 실행문은 하나의 `Stored Procedure(SP)`로 만들어서 사용할 수 있습니다.
 
-**Begin dialog** : [https://docs.microsoft.com/ko-kr/sql/t-sql/statements/begin-dialog-conversation-transact-sql?view=sql-server-ver15][sb-begin-dialog]
+`Begin dialog` : [https://docs.microsoft.com/ko-kr/sql/t-sql/statements/begin-dialog-conversation-transact-sql?view=sql-server-ver15][sb-begin-dialog]
 
 ```sql
 --Request Message 전송
@@ -184,7 +184,7 @@ Service로 전송된 Queue의 값을 실제로 처리하기 위해선 다음과 
 
 하나의 프로시저로 만들어서 작업을 하시면 작업하기 편리합니다.
 
-**Waitfor / Receive** : [https://docs.microsoft.com/ko-kr/sql/t-sql/statements/receive-transact-sql?view=sql-server-ver15][sb-waitfor-receive]
+`Waitfor / Receive` : [https://docs.microsoft.com/ko-kr/sql/t-sql/statements/receive-transact-sql?view=sql-server-ver15][sb-waitfor-receive]
 
 ```sql
 create procedure [dbo].[mg_set_broker_processing_player_info]
@@ -277,9 +277,9 @@ end
 위의 방법으로는 송신 Service -> 수신 Service로 메시지 전송시 수동으로 mg_set_broker_processing_player_info를 실행해서 Queue의 Message를 처리했습니다.  
 하지만 Queue에 SP를 저장해 놓음으로써 Service요청이 올 경우 Queue에 Message가 담기면 바로 처리하도록 설정 할 수 있는데 Service -> Serivce로 요청시 알아서 데이터 처리가 되도록 할 수 있는 방법입니다.  
 
-**procedure_name**으로 자동으로 수행할 SP를 추가해서 Service요청만으로 Message를 처리하도록 설정할 수 있습니다
+`procedure_name`으로 자동으로 수행할 SP를 추가해서 Service요청만으로 Message를 처리하도록 설정할 수 있습니다
 
-**Alter Queue** : [https://docs.microsoft.com/ko-kr/sql/t-sql/statements/alter-queue-transact-sql?view=sql-server-ver15][sb-alter-queue]
+`Alter Queue` : [https://docs.microsoft.com/ko-kr/sql/t-sql/statements/alter-queue-transact-sql?view=sql-server-ver15][sb-alter-queue]
 
 ```sql
 --Queue의 설정을 변경한다

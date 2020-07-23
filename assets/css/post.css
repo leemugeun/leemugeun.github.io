@@ -192,9 +192,18 @@
     margin-left: auto;
     margin-right: auto;
     padding: 30px 30px 30px 30px;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 30px;
 }
+
+/* .p_container strong{
+    border-radius: 3px;
+    font-weight: normal;
+    background-color: #e3e3e3;
+    padding: 1px 5px 1px 5px;
+    margin:0px 2px 0px 2px;
+    font-family: consolas;
+} */
 
 .p_lst{
     border-bottom: 1px solid gray;

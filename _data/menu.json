@@ -5,6 +5,7 @@
         "icon": "/files/nav/main.png",
         "sub_yn": "N"
       },
+
       {
         "title": "Profile",
         "icon": "main",
@@ -87,6 +88,36 @@
           {
             "s_title": "OSI 7 Layer",
             "s_link": "/web/osi7layer"
+          }
+        ]
+      },
+      {
+        "title": "Javascript",
+        "icon": "/files/nav/javascript.png",
+        "sub_yn": "Y",
+        "sub": [
+          {
+            "s_title": "Hoisting",
+            "s_link": "/js/hoisting"
+          }
+        ]
+      },
+      {
+        "title": "Cshap",
+        "icon": "/files/nav/csharp.png",
+        "sub_yn": "Y",
+        "sub": [
+          {
+            "s_title": "Get/Set",
+            "s_link": "/csharp/getset"
+          },
+          {
+            "s_title": "Extension Methods",
+            "s_link": "/csharp/exmethod"
+          },
+          {
+            "s_title": "Class 대괄호 사용",
+            "s_link": "/csharp/classutil1"
           }
         ]
       }
