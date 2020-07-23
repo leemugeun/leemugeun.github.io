@@ -1,7 +1,7 @@
 ---
 layout: post
 title : C# - Get/Set
-icon: Csharp
+icon: csharp
 permalink: /csharp/getset
 ---
 

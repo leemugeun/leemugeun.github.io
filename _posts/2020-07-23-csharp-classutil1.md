@@ -1,7 +1,7 @@
 ---
 layout: post
 title : C# - Class Utility (1) "This" Method
-icon: Csharp
+icon: csharp
 permalink: /csharp/classutil1
 ---
 
