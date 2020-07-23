@@ -64,7 +64,7 @@ code{
   line-height: 20px;
 }
 
-code[class="highlighter-rouge"]{
+code[class="highlighter-rouge"], code[class="language-plaintext highlighter-rouge"]{
   border-radius: 3px;
   font-weight: normal;
   background-color: #e3e3e3;
