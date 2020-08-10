@@ -39,29 +39,12 @@ a, a:link, a:visited, a:active, a:hover {
   text-decoration: none;
 }
 
-.p_nav ul li{
-  margin: 0px;
-  padding: 0px; 
-  list-style-type: none;
-}
-
-.p_wrap{
-  width:100%;
-  height: 100%;
-  position: relative;
-}
-
-.p_container .md_img{
-  max-width: 100%;
-  height: auto;
-  margin: 20px auto 20px auto;
-}
-
 /* High light */
 code{
   font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
   font-weight: normal;
-  line-height: 20px;
+  line-height: 16px;
+  font-size: 13px
 }
 
 code[class="highlighter-rouge"], code[class="language-plaintext highlighter-rouge"]{
@@ -71,10 +54,17 @@ code[class="highlighter-rouge"], code[class="language-plaintext highlighter-roug
   padding: 1px 5px 1px 5px;
   margin:0px 2px 0px 2px;
   font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 15px;
 }
 
 pre{
   border: 1px solid black;
   border-radius: 4px;
   font-size: 14px;
+}
+
+@media(max-width:700px){
+  code[class="highlighter-rouge"], code[class="language-plaintext highlighter-rouge"]{
+    font-size: 13px;
+  }
 }

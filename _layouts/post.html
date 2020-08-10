@@ -1,79 +1,65 @@
 <html>
     {% include head.html %}
-
     <body>
-        <nav id="p_nav" class="p_nav">
-            <div class="p_nav_btn">
-                <a onclick="closeNav();">
-                    <img src="{{ site.files }}/nav/right.png" height="60">
+        {% include navigation.html %}
+
+        <div id="bg_black" class="bg_black"></div>
+        
+        <div id="p_wrap" class="wrap">
+            <div class="head_btn">
+                <a onclick="openNav();">
+                    <img src="{{ site.files }}/menu.png" height="40">
                 </a>
             </div>
-            <div class="p_nav_title">
-                <img class="nav_icon" src="{{ site.files }}/nav/navigation.png" height="35">
-                <span>Navigation</span>
-            </div>
-            <div id="p_nav_menu" class="p_nav_menu">
-                {% for item in site.data.menu.list %}
-                <ul>
-                    {% if item.title != "Profile" %}
-                    <li data-navdep="1" class="nav_onedep">
-                        <img class="nav_icon" src={{item.icon}} height="27">
-                        {% if item.title == "Main" %}
-                        <a href="/" style="color: black;">{{ item.title }}</a>
-                        {% else %}
-                        {{ item.title }}
-                        {% endif %}
-                    </li>
-                    {% endif %}
-
-                    {% if item.sub_yn == "Y" %}
-                    <ul data-navdep="2" class="nav_twodep">
-                        {% for sub in item.sub %}
-                        <li><a href={{sub.s_link}}>- {{ sub.s_title }}</a></li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </ul>
-                {% endfor %}
-            </div>
-        </nav>
-        <div id="p_bg_black" class="p_bg_black"></div>
-        <div id="p_wrap" class="p_wrap">
-            <header id="p_header" class="p_header">
-                <div class="p_header_title">
-                    <a href="/" onclick="window.scrollTo(0,0);">
-                        <span>Tech</span>
-                    </a>
-                </div>
-                <div class="p_header_btn">
-                    <a onclick="openNav();">
-                        <img src="{{ site.files }}/menu.png" height="40">
-                    </a>
-                </div>
-            </header>
 
             {% if page.title == "Blog" %}
-            <div id="banner" class="p_sub" style="background-image: url('/files/ban/{{ page.icon }}.jpg')">
-                <div class="sub_txt">Guide</div>
+            <div id="banner" class="ban">
+                <div class="ban_srch">
+                    <span class="ban_txt">CATEGORY</span>
+                </div>
+                <div id="ban_catg" class="ban_catg">
+                    <ul>
+                        <li class="on" data-value="">All</li>
+                        <li data-value="csharp">C#</li>
+                        <li data-value="java">JAVA</li>
+                        <li data-value="spring">Spring</li>
+                        <li data-value="db">Database</li>
+                        <li data-value="web">Web</li>
+                        <li data-value="javascript">Javascript</li>
+                        <li data-value="git">Git</li>
+                    </ul>
+                </div>
             </div>
             {% endif %}
             
-            <div class="p_container_wrap">
-                <div id="cont_title" class="p_container_title">
-                    {{ page.title }} Posting
-                </div>
-                <div id="p_container" class="p_container">
+            <div class="container">
+                {% if page.title == "Blog" %}
+                    {% assign ex_cont = "lst" %}
+                {% else %}
+                    {% assign ex_cont = "inr" %}
+                    <div class="container_title">
+                        <span>{{ page.title }}</span>
+                    </div>
+                {% endif %}
+
+                <div id="p_container" class="container_{{ ex_cont }}">
                     {% if page.title == "Blog" %}
                         {% for post in site.posts %}
                         {% if post.expose_yn == null %}
-                          <article class="p_lst">
+                          <article class="p_lst" data-value="{{ post.icon }}">
                             <a href="{{ post.url }}">
                                 <p class="p_lst_title">{{ post.title }}</p>
-                                <p class="p_lst_txt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+                                <div class="p_lst_txt">
+                                    <span>{{ post.excerpt | strip_html | truncatewords: 40 }}</span>
+                                </div>
 
                                 <div class="p_lst_side">
-                                    <img class="p_lst_icon" src="/files/nav/{{ post.icon }}.png" height="50" />
-                                    <p>{{ post.date |  date: '%Y-%m-%d' }}</p>
+                                    <div class="p_lst_icon">
+                                        <img class="img" src="/files/nav/{{ post.icon }}.png" height="35" />
+                                    </div>
+                                    <div class="p_lst_day">
+                                        <p>{{ post.date |  date: '%Y-%m-%d' }}</p>
+                                    </div>
                                 </div>
                             </a>
                           </article>

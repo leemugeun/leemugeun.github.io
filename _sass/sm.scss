@@ -1,0 +1,353 @@
+.wrap{
+    width:100%;
+    height: 100%;
+    position: relative;
+  }
+
+.ban{
+    width: 100%;
+    height: 200px;
+    position: relative;
+
+    &_srch{
+        margin: 20px auto auto auto;
+        max-width: 500px;
+        height: 100px;
+        outline: 5px solid black;
+        text-align: center;
+    }
+
+    &_txt{
+        font-size: 70px;
+        font-weight: bold;
+    }
+
+    &_catg{
+        margin: auto auto auto auto;
+        max-width: 1000px;
+        max-height: 100px;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        text-align: center;
+        margin-top: 40px;
+
+        ul{
+            padding: 0px;
+        }
+
+        li{
+            list-style: none;
+            max-width: 100px;
+            display: inline-block;
+            background-color: #e3e3e3;
+            padding: 1px 5px 1px 5px;
+            border-radius: 3px;
+            line-height: 30px;
+            font-size: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .on {
+            background-color: #F5DA81;
+        }
+    }
+}
+
+.bg_black{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.2;
+    z-index: 10;
+    position: fixed;
+    display: none;
+}
+
+/* Navigation */
+
+.head{
+    &_btn{
+        width: 40px;
+        height: 40px;
+        top: 11px;
+        position: relative;
+        left:85%;
+        cursor: pointer;
+        z-index: 10;
+    }
+}
+
+.nav{
+    top: 0px;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    background-color: white;
+    right: -300px;
+    z-index: 100;
+    overflow-y: scroll;
+    font-family: Segoe UI,SegoeUI,Helvetica Neue,Helvetica,Arial,sans-serif;
+
+    ul {
+        padding: 0px;
+        list-style: none;
+    }
+
+    &_btn{
+        margin-top: 30px;
+        width: 60px;
+        height: 60px;
+        right: 7%;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    &_menu{
+        position: absolute;
+        margin-top: 100px;
+        margin-left: 30px;
+        height: 100%;
+    }
+
+    &_onedep{
+        font-size: 25px;
+        font-weight: normal;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    &_twodep{
+        font-size: 22px;
+        display: none;
+        margin: 5px 0 10px 0px;
+
+        li{
+            margin-left: 15px;
+            margin-top: 7px;
+            font-size: 17px;
+        }
+
+        a{
+            color: gray;
+        }
+    }
+}
+
+/* Inner */
+
+.container{
+    min-height: 500px;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 30px;
+
+    &_lst{
+        background-color: white;
+        border-radius: 10px;
+        max-width: 1200px;
+        min-height: 500px;
+        height: auto;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 30px 30px 30px;
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    &_inr{
+        @extend .container_lst;
+    }
+
+    &_title{
+        margin: 20px auto auto auto;
+        max-width: 800px;
+        min-height: 30px;
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .md_img{
+        max-width: 100%;
+        height: auto;
+        margin: 20px auto 20px auto;
+    }
+
+    .p_lst{
+        border-bottom: 1px solid gray;
+        padding: 1px 10px 20px 17px;
+        max-width: 1000px;
+        min-height: 150px;
+        margin: 10px auto 20px auto;
+        position: relative;
+
+        &_title{
+            font-size: 27px;
+        }
+
+        &_txt{
+            max-width:850px;
+        }
+
+        &_side{
+            width: 150px;
+            height: 100px;
+            top: 50px;
+            right: 0;
+            position: absolute;
+            text-align: center;
+        }
+
+        &_icon{
+            margin-top: 15px;
+        }
+    }
+}
+
+/* Calender */
+.cldr{
+    min-width:900px;
+    text-align: center;
+    margin: auto auto 50px auto;
+
+    &_year{
+        font-size: 30px;
+        margin-bottom: 20px;
+        text-align: center;    
+    }
+
+    &_month{
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-align: center;    
+    }
+
+    &_opc{
+        color:#383fe9;
+    }
+
+    &_mg{
+        color:#ff0000;
+    }
+
+    tr td{
+        height: 50px;
+    }
+}
+
+@media(max-width:700px){
+    @mixin ban_info() {
+        max-width:300px;
+    }
+
+    /* Navigation */
+    .nav{
+        max-width:800px;
+    }
+
+    /* Banner */
+    .ban{
+        height: 150px;
+        
+        &_srch{
+            margin-top: 30px;
+            height: 45px;
+            @include ban_info();
+        }
+
+        &_txt{
+            font-size: 30px;
+        }
+
+        &_catg{
+            margin: 20px auto 0px auto;
+            @include ban_info();
+        }
+    }
+
+    /* Container */
+    .container{
+        padding-top: 0px;
+        
+        &_lst{
+            padding: 0px 15px 10px 15px;
+            margin-top: 0px;
+            font-size: 13px;
+        }
+
+        &_inr{
+            margin-top: 20px;
+        }
+
+        &_title{
+            margin: 0px auto auto auto;
+            max-width: 250px;
+            min-height: 30px;
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .p_lst{
+            padding: 1px 10px 0 17px;
+            margin-top: 0px;
+            margin-bottom: 20px;
+            max-height: 400px;
+
+            &_title{
+                margin: 10px auto 10px auto;
+                font-size: 20px;
+            }
+
+            &_icon{
+                margin-top: 0px;
+                text-align: right;
+                float: right;
+            }
+            
+            &_txt{
+                font-size: 12px;
+            }
+
+            &_day{
+                p{
+                    margin-left: 150px;
+                }
+            }
+
+            &_side{
+                top:0px;
+                position: relative;
+                width:300px;
+                height: 40px;
+            }
+        }
+    }
+
+    /* Calender */
+    .cldr{
+        min-width:300px;
+        margin: auto auto 20px auto;
+
+        &_year{
+            font-size: 25px;
+        }
+
+        &_month{
+            font-size: 17px;
+        }
+
+        &_opc{
+            font-size: 12px;
+        }
+
+        &_mg{
+            font-size: 12px;
+        }
+
+        tr td{
+            height: 50px;
+        }
+    }
+}

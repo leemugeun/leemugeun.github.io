@@ -1,0 +1,30 @@
+<nav id="p_nav" class="nav">
+    <div class="nav_btn">
+        <a onclick="closeNav();">
+            <img src="{{ site.files }}/nav/right.png" height="40">
+        </a>
+    </div>
+    <div id="p_nav_menu" class="nav_menu">
+        {% for item in site.data.menu.list %}
+        <ul>
+            {% if item.title != "Profile" %}
+            <li data-navdep="1" class="nav_onedep">
+                {% if item.title == "Main" %}
+                <a href="/" style="color: black;">{{ item.title }}</a>
+                {% else %}
+                {{ item.title }}
+                {% endif %}
+            </li>
+            {% endif %}
+
+            {% if item.sub_yn == "Y" %}
+            <ul data-navdep="2" class="nav_twodep">
+                {% for sub in item.sub %}
+                <li><a href={{sub.s_link}}>{{ sub.s_title }}</a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </ul>
+        {% endfor %}
+    </div>
+</nav>

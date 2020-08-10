@@ -27,17 +27,33 @@ function pageOnload(){
     else{
         $("#cont_title").css("margin-top", "70px");
     }
+
+    $("#ban_catg li").click(function(){
+        var type = $(this).attr("data-value");
+
+        if (type == undefined || type == null){
+            $("#p_container article").show();    
+            return;
+        }
+        
+        $("#ban_catg li").removeAttr("class");
+        $(this).addClass("on");
+        $("#p_container article").hide();
+
+        if (type == ""){
+            $("#p_container article").show();
+        }
+        else{
+            $("#p_container article[data-value='" + type + "']").show();
+        }
+    });
 }
 
 function openNav() {
-    $("#p_bg_black").show();
+    $("#bg_black").show();
 
     if ($("body").width() > 700 ){
-        $("#p_wrap").animate({
-            width : ($("body").width() - 350) + "px"
-        });
-        
-        $("#p_nav").animate({ 
+        $("#p_nav").animate({
             right : "0px"
         });
     }
@@ -50,22 +66,19 @@ function openNav() {
 }
 
 function closeNav(){
-    $("#p_bg_black").hide();
+    $("#bg_black").hide();
     $("#p_nav_menu [data-navdep='2']").hide();
 
     if ($("body").width() > 700 ){
-        $("#p_wrap").animate({
-            width : "100%"
-        });
-        
         $("#p_nav").animate({ 
-            right : "-350px"
+            width : "300px",
+            right : "-300px"
         });
     }
     else{
         $("#p_nav").animate({ 
-            width : "350px",
-            right : "-350px"
+            width : "300px",
+            right : "-300px"
         });
     }
 }
@@ -107,7 +120,6 @@ function setCalender() {
                 while (month_total_date > 0){
                     // 0 : 일 ~ 6 : 토
                     var month_day = new Date(year + "/" + month + "/" + month_date).getDay();
-                    var loop_date = year + "/" + month + "/" + month_date;
                     var innr = "";
                     var day_txt = "";
 
@@ -145,19 +157,8 @@ function setCalender() {
                             innr += "<br/><b class=\"cldr_mg\">재택</b>";
                         }
                     }
-                    
-                    if (innr == ""){
-                        if (now_date == loop_date){
-                            day_txt = "<b>" + month_date + "</b>";
-                        }
-                        else{
-                            day_txt += month_date;
-                        }
-                    }
-                    else{
-                        day_txt += (month_date + innr);
-                    }
 
+                    day_txt += innr == "" ? month_date : (month_date + innr);
                     html += "<td>" + day_txt + "</td>";
 
                     // 1주 라인
