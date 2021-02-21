@@ -1,0 +1,128 @@
+<html>
+    {% include head.html %}
+    <link rel="stylesheet" type="text/css" href="{{ site.asset_url }}/css/profile.css" />
+
+    <body>
+        <div id="p_wrap" class="wrap">
+            <div class="container">
+                <div class="container_title">
+                    <span>{{ page.title }}</span>
+                </div>
+
+                <div class="prp_inr">
+                    <div class="cust">
+                        <h1 class="tit">이름/생년월일</h1>
+                        <hr>
+                        <span class="cot">이무근 / 1991.01.31</span>
+                    </div>
+
+                    <div class="cmt">
+                        <h1 class="tit">소개</h1>
+                        <hr>
+                        <div class="txt">
+                            ○ 2017년부터 웹개발자로 현업에 있으며 .Net Framework(Spring .Net)를 기반으로 한, C#을 주력언어로 개발중인 웹개발자 입니다.<br/>
+                            ○ Front-end, Back-end 둘다 개발이 가능하며 Front-end영역은 본 사이트를 작업할때만 주로 Css나 Sass를 이용해서 작업하며 업무로는 Back-end를 하고있습니다.<br/>
+                            ○ ASP.NET(C#)/MSSQL을 주력으로 웹개발이 가능하지만 Linux OS환경에서의 Java웹개발도 틈틈이 공부하고 있으며 Java/.Net모두 가능하도록 학습하고 있습니다.<br/>
+                            ○ 모르는 것, 까먹을만한 것, 자주하지않는 것에 대해서는 기록해서 반복적인 구글링을 피함과 동시에 즉각적으로 보고 코드를 적용하거나, 구글링 하는데 소요되는 시간을 줄이기 위해 <a href="https://leemugeun.github.io" target="_blank" style="font-weight: bold;">leemugeun.github.io</a>에 개인적인 학습사항들을 기록하고 있습니다.
+                        </div>
+                    </div>
+
+                    <div class="cert">
+                        <h1 class="tit">자격사항</h1>
+                        <hr>
+                        <span class="txt">정보처리기사, DASP, SQLD</span>
+                    </div>
+
+                    <div class="skill">
+                        <h1 class="tit">스킬셋</h1>
+                        <hr>
+                        <h2>주 사용가능 기술</h2>
+                        <div>
+                            <ul>
+                                <li><img src="{{ site.files}}/profile/csharp.png" height="100"/></li>
+                                <li><img src="{{ site.files}}/profile/aspnet.png" height="100"/></li>
+                                <li><img src="{{ site.files}}/profile/iis.png" height="100"/></li>
+                                <li><img src="{{ site.files}}/profile/mssql.png" height="100"/></li>
+                                <li><img src="{{ site.files}}/profile/html.png" height="100"/></li>
+                                <li><img src="{{ site.files}}/profile/css.png" height="100"/></li>
+                                <li><img src="{{ site.files}}/profile/javascript.png" height="100"/></li>
+                                <li><img src="{{ site.files}}/profile/jquery.png" height="100"/></li>
+                                <li><img src="{{ site.files}}/profile/git.png" height="100"/></li>
+                            </ul>
+                        </div>
+
+                        <h2>추가 학습중인 기술</h2>
+                        <div>
+                            <ul>
+                                <li><img src="{{ site.files}}/profile/java.png" height="100"/></li>
+                                <li><img src="{{ site.files}}/profile/springboot.png" height="100"/></li>
+                                <li><img src="{{ site.files}}/profile/es6.png" height="100"/></li>
+                                <li><img src="{{ site.files}}/profile/react.png" height="100"/></li>
+                                <li><img src="{{ site.files}}/profile/webpack.png" height="100"/></li>
+                                <li><img src="{{ site.files}}/profile/mysql.png" height="100"/></li>
+                                <li><img src="{{ site.files}}/profile/oracle.png" height="100"/></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tml">
+                        <h1 class="tit">타임 라인</h1>
+                        <hr>
+                        <div class="prc">
+                            <div class="prc_tit">
+                                (주)피알컴퍼니 (2015.01 - 2018.04)
+                            </div>
+                            <hr>
+                            <div class="prc_skill">
+                                <ul>
+                                    <li><span>Language : </span>C#</li>
+                                    <li><span>FrameWork : </span>ASP.NET(MVC)</li>
+                                    <li><span>Script : </span>JavaScript, Jquery, AJax, AugularJS, Bootstrap</li>
+                                    <li><span>DB : </span>MS-SQL</li>
+                                    <li><span>Tool & ETC : </span>IIS, tortoise SVN, Ibatis</li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="prc_work">
+                                <ul>
+                                    <li>알뜰이 쇼핑몰 사이트 어드민 영역 상품수정, 배송정보 수정 작업</li>
+                                    <li>문자 전송사이트 리뉴얼</li>
+                                    <li>문자 전송시 회원의 주소록 페이지 작업</li>
+                                    <li>저장된 문자 템플릿 페이지 작업</li>
+                                    <li>전송대상 주소록 입력시 휴대폰 입력화면 SlickGrid로 구현</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gio">
+                            <div class="gio_tit">
+                                지오시스(유) - Qoo10 (2018.05 - 재직중)
+                            </div>
+                            <hr>
+                            <div class="gio_skill">
+                                <span>Language : </span>C#<br/>
+                                <span>FrameWork : </span>ASP.NET(Spring.NET)<br/>
+                                <span>Script : </span>JavaScript, Jquery, AJax<br/>
+                                <span>DB : </span>MS-SQL<br/>
+                                <span>Tool & ETC : </span>IIS, Git<br/>
+                            </div>
+                            <hr>
+                            <div class="gio_work">
+                                <ul>
+                                    <li>주문/결제 부서에서 상품 주문시 주문처리 담당</li>
+                                    <li>탑업상품(휴대폰 요금충전) 작업시 해외 업체와 Api통신작업 및 기타 오픈 Api연동시 작업</li>
+                                    <li>신규주문 프로세스 발생시 주문 프로세스 작업(선물주문, 복수의 주소지로 동시주문)</li>
+                                    <li>SMS/EMAIL/앱푸쉬 전송 및 카카오 Api를 연동한 비즈메시지 작업</li>
+                                    <li>시간대별로 동작하는 주문관련 스케쥴러 프로그램 작업</li>
+                                    <li>쿠폰(브랜드, 카테고리, 셀러 등등) 발행, 할인정책에 의한 가격세팅 유지보수</li>
+                                    <li>사내 Admin/Seller전용 사이트의 주문/결제내역, 취소/환불/교환 내역, 선물권, 휴대폰 요금충전 서비스, 쿠폰 서비스 페이지 유지보수</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

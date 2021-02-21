@@ -1,7 +1,5 @@
 $(document).ready(function() {
     pageOnload();
-
-    setCalender();
 });
 
 function pageOnload(){
@@ -30,20 +28,30 @@ function pageOnload(){
 
     $("#ban_catg li").click(function(){
         var type = $(this).attr("data-value");
+        var category = [];
 
-        if (type == undefined || type == null){
-            $("#p_container article").show();    
-            return;
-        }
-        
+        $("#p_container article").hide();
         $("#ban_catg li").removeAttr("class");
         $(this).addClass("on");
-        $("#p_container article").hide();
+
+        $("#ban_catg li").map(function(idx, item){
+            if ($(item).attr("data-value") != ""){
+                category.push($(item).attr("data-value"));
+            }
+        })
 
         if (type == ""){
             $("#p_container article").show();
+        } else if (type == "etc"){
+            $.each($("#p_container article"), function(){
+                var value = $(this).attr("data-value");
+                
+                if ($.inArray(value, category) < 0){
+                    $("#p_container article[data-value='" + value + "']").show();
+                }
+            })
         }
-        else{
+        else {
             $("#p_container article[data-value='" + type + "']").show();
         }
     });
@@ -80,103 +88,5 @@ function closeNav(){
             width : "300px",
             right : "-300px"
         });
-    }
-}
-
-function setCalender() {
-    if (location.href.toLowerCase().indexOf("calender") > -1){
-        var html = "";
-        var dt = new Date();
-        var year = dt.getFullYear();
-        var now_date = year + "/" + (dt.getMonth() + 1) + "/" + dt.getDate();
-        var next_year = dt.getFullYear() + 2;
-        var opc_day = 1;
-        var mg_hday = 0;
-
-        // 연단위
-        while (year < next_year){
-            var month = 1;
-
-             html += "<div class=\"cldr_year\">" + year + "년</div>";
-
-            // 연간 월수
-            while (month < 13){
-                var month_date = 1;
-                var month_total_date = new Date(year, month, 0).getDate();
-
-                html += "<div class=\"cldr_month\">" + month + "월</div>";
-                html += "<table class=\"cldr\">";
-                html += "   <tr>";
-                html += "       <th style=\"width:15%\">일</th>";
-                html += "       <th style=\"width:14%\">월</th>";
-                html += "       <th style=\"width:14%\">화</th>";
-                html += "       <th style=\"width:14%\">수</th>";
-                html += "       <th style=\"width:14%\">목</th>";
-                html += "       <th style=\"width:14%\">금</th>";
-                html += "       <th style=\"width:15%\">토</th>";
-                html += "   </tr>";
-
-                // 월간 일수
-                while (month_total_date > 0){
-                    // 0 : 일 ~ 6 : 토
-                    var month_day = new Date(year + "/" + month + "/" + month_date).getDay();
-                    var innr = "";
-                    var day_txt = "";
-
-                    opc_day = opc_day > 5 ? 1 : opc_day;
-                    mg_hday = mg_hday > 5 ? 1 : mg_hday;
-
-                    if (month_day == 0){
-                        opc_day++;
-                        mg_hday++;
-                    }
-
-                    // 1주 라인
-                    if (month_day == 0){
-                        html += "<tr>";    
-                    }
-                    
-                    // 1주 내용
-                    if (month_date == 1){
-                        for (var wNum = 0; wNum < 7; wNum++){
-                            if (wNum == month_day){
-                                break;
-                            }
-                            else{
-                                html += "<td></td>";
-                            }
-                        }
-                    }
-
-                    if (month_day != 0 && month_day != 6){
-                        if (month_day == opc_day){
-                            innr += "<br/><b class=\"cldr_opc\">OPC</b>";
-                        }
-                        
-                        if (month_day == mg_hday){
-                            innr += "<br/><b class=\"cldr_mg\">재택</b>";
-                        }
-                    }
-
-                    day_txt += innr == "" ? month_date : (month_date + innr);
-                    html += "<td>" + day_txt + "</td>";
-
-                    // 1주 라인
-                    if (month_day == 6){
-                        html += "</tr>";
-                    }
-
-                    month_date++;
-                    month_total_date--;
-                }
-
-                html += "</table>";
-                month++;
-            }
-
-            year++;
-        }
-
-        $("#p_container").html(html);
     }
 }
