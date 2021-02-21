@@ -88,6 +88,10 @@
           {
             "s_title": "OSI 7 Layer",
             "s_link": "/web/osi7layer"
+          },
+          {
+            "s_title": "Linux Cmd",
+            "s_link": "/web/linuxcmd"
           }
         ]
       },
